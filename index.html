@@ -1451,6 +1451,73 @@ html{scrollbar-gutter:stable}
   .site-desktop .desktop-hero-invitation>.desktop-hero-caption{font-size:12px}
 }
 
+/* Celular: detalhes no próprio campo de visão, sem rolagem automática
+   até o fim da lista. O desktop e as grades intermediárias não mudam. */
+.desktop-tour-backdrop{display:none}
+@media(max-width:767px){
+  body.giro-mobile-detail-open{overflow:hidden}
+  .site-desktop .desktop-tour-backdrop:not([hidden]){
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:119;
+    background:rgba(17,22,29,.55);
+  }
+  .site-desktop .desktop-tour-panel:not([hidden]){
+    display:block;
+    position:fixed;
+    z-index:120;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:min(430px,calc(100vw - 28px));
+    height:auto;
+    max-width:none;
+    max-height:calc(100dvh - 30px);
+    margin:0;
+    padding:15px 17px 18px;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 20px 65px rgba(17,24,39,.28);
+  }
+  .site-desktop .desktop-panel-photo{
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:175px;
+    aspect-ratio:16/8.5;
+    object-fit:cover;
+    border-radius:9px;
+  }
+  .site-desktop .desktop-panel-close{
+    top:22px;
+    right:24px;
+    z-index:1;
+    width:34px;
+    height:34px;
+    border:1px solid #e6e8ea;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 2px 12px rgba(0,0,0,.14);
+    font-size:24px;
+  }
+  .site-desktop .desktop-panel-kicker{margin:11px 0 4px;font-size:10px}
+  .site-desktop .desktop-tour-panel h2{font-size:23px;line-height:1.17}
+  .site-desktop .desktop-panel-description{
+    margin:9px 0;
+    font-size:12.5px;
+    line-height:1.5;
+  }
+  .site-desktop .desktop-panel-meeting{margin:0 0 10px;font-size:11.5px;line-height:1.45}
+  .site-desktop .desktop-panel-facts{gap:7px}
+  .site-desktop .desktop-panel-facts>div{font-size:12px;line-height:1.4;gap:9px}
+  .site-desktop .desktop-panel-facts svg{width:17px;height:17px}
+  .site-desktop .desktop-participate{min-height:43px;margin-top:14px;font-size:13px}
+}
+
 </style></head><body>
 <header class="head"><div class="wrap nav"><div class="brand-lockup"><a href="#inicio"><img class="logo" src="logo.png" alt="GIRO SINDEGTUR SP"></a><div class="acronym"><b>G</b>uias de turismo<br><b>I</b>nformações<br><b>R</b>oteiros<br><b>O</b>pções turísticas</div></div><button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button><nav class="navlinks" id="mainNav"><a href="#giro">Experiências</a><button data-future="city" type="button">City Tour</button><button data-future="excursoes" type="button">Excursões</button><button data-future="eventos" type="button">Eventos especiais</button><button id="openAbout" type="button">Sobre o projeto</button><a href="#central">Central</a><a href="#contato">Contato</a><a href="https://www.instagram.com/giro.sindegtur/" target="_blank" rel="noopener">Instagram ↗</a></nav></div></header>
 <div class="test-notice" role="status"><strong>Site em fase de testes, ainda não operacional.</strong> As informações são provisórias. Para dúvidas ou interesse nos passeios, escreva para <a href="mailto:giro.sindegtur@gmail.com">giro.sindegtur@gmail.com</a>.</div>
@@ -1493,6 +1560,7 @@ html{scrollbar-gutter:stable}
           <div class="desktop-cards" id="desktopCards" aria-label="Experiências da semana"></div>
         </div>
       </div>
+      <div class="desktop-tour-backdrop" id="desktopTourBackdrop" hidden aria-hidden="true"></div>
       <aside class="desktop-tour-panel" id="desktopTourPanel" aria-label="Detalhes do passeio" hidden>
         <button class="desktop-panel-close" id="desktopPanelClose" type="button" aria-label="Fechar detalhes">×</button>
         <img id="desktopPanelPhoto" class="desktop-panel-photo" src="assets/photo-000.jpg" alt="Atrativo do passeio">
@@ -1624,9 +1692,25 @@ const desktopFrameSlots=[
 ];
 let desktopSelectedIndex=null,desktopRenderedWeek=null,desktopLastCard=null;
 const desktopPanel=document.getElementById('desktopTourPanel');
+const desktopBackdrop=document.getElementById('desktopTourBackdrop');
 const desktopSection=document.getElementById('desktopExperiencias');
 const desktopCards=document.getElementById('desktopCards');
 const desktopDots=document.getElementById('desktopOrbitDots');
+const isMobileTourDialog=()=>window.matchMedia('(max-width: 767px)').matches;
+function syncMobileTourDialog(open){
+  const active=open&&isMobileTourDialog();
+  desktopBackdrop.hidden=!active;
+  document.body.classList.toggle('giro-mobile-detail-open',active);
+  if(active){
+    desktopPanel.setAttribute('role','dialog');
+    desktopPanel.setAttribute('aria-modal','true');
+    desktopPanel.setAttribute('aria-labelledby','desktopPanelTitle');
+  }else{
+    desktopPanel.removeAttribute('role');
+    desktopPanel.removeAttribute('aria-modal');
+    desktopPanel.removeAttribute('aria-labelledby');
+  }
+}
 for(let i=0;i<12;i++){
   const a=(-75+i*30)*Math.PI/180;
   const dot=document.createElement('span');dot.className='desktop-orbit-dot';
@@ -1635,6 +1719,7 @@ for(let i=0;i<12;i++){
   dot.style.background=i%2===0?'#cfd1d5':'#e7aaaa';desktopDots.append(dot);
 }
 function closeDesktopDetail(restoreFocus=true){
+  syncMobileTourDialog(false);
   desktopPanel.hidden=true;
   desktopSection.classList.add('panel-hidden');
   desktopCards.querySelectorAll('.desktop-card').forEach(b=>b.setAttribute('aria-pressed','false'));
@@ -1657,7 +1742,11 @@ function openDesktopDetail(i,button,moveFocus=false){
   const subject='Interesse | '+r[3]+' | '+dataBR+' | '+r[2];
   const body='Olá, equipe GIRO SINDEGTUR-SP!\n\nGostaria de consultar a disponibilidade para este passeio:\nRoteiro: '+r[3]+'\nData: '+dataBR+'\nHorário: '+r[2]+'\nParticipantes: ____ pessoa(s)\nNome para contato: ____\n\nPor favor, enviem as orientações de reserva e pagamento.';
   document.getElementById('desktopPanelParticipate').href=gmailCompose(subject,body);
-  if(moveFocus&&window.innerWidth<1360){
+  syncMobileTourDialog(true);
+  if(moveFocus&&isMobileTourDialog()){
+    // A ficha aparece sobre a lista. A página não se desloca.
+    document.getElementById('desktopPanelTitle').focus({preventScroll:true});
+  }else if(moveFocus&&window.innerWidth<1360){
     document.getElementById('desktopPanelTitle').focus({preventScroll:true});
     desktopPanel.scrollIntoView({behavior:'smooth',block:'start'});
   }
@@ -1692,10 +1781,10 @@ function renderDesktop(){
   if(changed){
     closeDesktopDetail(false);
     const nextCard=desktopCards.querySelector('.desktop-card');
-    if(nextCard)openDesktopDetail(+nextCard.dataset.idx,nextCard,false);
+    if(nextCard&&!isMobileTourDialog())openDesktopDetail(+nextCard.dataset.idx,nextCard,false);
   }
   else if(oldSelection!==null){const chosen=desktopCards.querySelector('[data-idx="'+oldSelection+'"]');if(chosen)openDesktopDetail(oldSelection,chosen,false);else closeDesktopDetail(false)}
-  else if(desktopRenderedWeek===0||desktopRenderedWeek===earliestWeekIndex){
+  else if(!isMobileTourDialog()&&(desktopRenderedWeek===0||desktopRenderedWeek===earliestWeekIndex)){
     const firstCard=desktopCards.querySelector('.desktop-card');if(firstCard)openDesktopDetail(+firstCard.dataset.idx,firstCard,false);
   }
 }
@@ -1703,10 +1792,16 @@ const originalPaint=paint;
 paint=function(){originalPaint();renderDesktop()};
 renderDesktop();
 let desktopWasWide=window.innerWidth>=1360;
+let desktopWasMobile=isMobileTourDialog();
 window.addEventListener('resize',()=>{
   const wide=window.innerWidth>=1360;
-  if(wide===desktopWasWide)return;
+  const mobile=isMobileTourDialog();
+  if(wide===desktopWasWide&&mobile===desktopWasMobile)return;
   desktopWasWide=wide;
+  if(mobile!==desktopWasMobile){
+    desktopWasMobile=mobile;
+    closeDesktopDetail(false);
+  }
   desktopDots.querySelectorAll('.desktop-orbit-dot').forEach((dot,i)=>{
     const a=(-75+i*30)*Math.PI/180;
     dot.style.left=(wide?565+475*Math.cos(a):(408+330*Math.cos(a))*desktopOrbitScale)+'px';
@@ -1717,6 +1812,20 @@ window.addEventListener('resize',()=>{
 document.getElementById('desktopPrev').onclick=()=>document.getElementById('prev').click();
 document.getElementById('desktopNext').onclick=()=>document.getElementById('next').click();
 document.getElementById('desktopPanelClose').onclick=()=>closeDesktopDetail(true);
+desktopBackdrop.onclick=()=>closeDesktopDetail(true);
+document.addEventListener('keydown',event=>{
+  if(!isMobileTourDialog()||desktopPanel.hidden)return;
+  if(event.key==='Escape'){
+    event.preventDefault();closeDesktopDetail(true);
+  }else if(event.key==='Tab'){
+    const items=[...desktopPanel.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),[tabindex]:not([tabindex="-1"])')]
+      .filter(el=>el.getClientRects().length>0);
+    if(!items.length)return;
+    const first=items[0],last=items[items.length-1];
+    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+  }
+});
 document.getElementById('desktopAboutButton').onclick=()=>document.getElementById('openAbout').click();
 const desktopMenuButton=document.getElementById('desktopMenuButton');
 const desktopNav=document.getElementById('desktopNav');
