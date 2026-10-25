@@ -1518,6 +1518,73 @@ html{scrollbar-gutter:stable}
   .site-desktop .desktop-participate{min-height:43px;margin-top:14px;font-size:13px}
 }
 
+/* Ficha no celular: leitura mais confortável e agrupamentos com respiro.
+   Mantém o destaque vermelho da marca apenas nos ícones e no botão de reserva. */
+.site-desktop .desktop-panel-meeting-label{font-weight:inherit}
+@media(max-width:767px){
+  .site-desktop .desktop-tour-panel:not([hidden]){
+    padding:19px 19px 24px;
+    border-radius:18px;
+  }
+  .site-desktop .desktop-panel-photo{
+    max-height:192px;
+    aspect-ratio:16/9;
+  }
+  .site-desktop .desktop-panel-close{
+    top:26px;
+    right:26px;
+  }
+  .site-desktop .desktop-panel-kicker{
+    margin:16px 0 5px;
+    font-size:10px;
+    letter-spacing:1px;
+  }
+  .site-desktop .desktop-tour-panel h2{
+    font-size:23px;
+    line-height:1.24;
+    font-weight:650;
+    overflow-wrap:anywhere;
+  }
+  /* O título recebe foco para acessibilidade, sem o retângulo vermelho. */
+  .site-desktop .desktop-tour-panel h2:focus{outline:none}
+  .site-desktop .desktop-panel-description{
+    margin:12px 0 14px;
+    font-size:13.5px;
+    line-height:1.58;
+  }
+  .site-desktop .desktop-panel-meeting{
+    margin:0 0 15px;
+    font-size:12.5px;
+    line-height:1.6;
+  }
+  .site-desktop .desktop-panel-meeting-label{
+    color:#414852;
+    font-weight:650;
+  }
+  .site-desktop .desktop-panel-facts{
+    gap:11px;
+    padding-top:13px;
+    border-top:1px solid #e9ebef;
+  }
+  .site-desktop .desktop-panel-facts>div{
+    align-items:center;
+    gap:11px;
+    font-size:13px;
+    line-height:1.5;
+  }
+  .site-desktop .desktop-panel-facts>div:first-child span,
+  .site-desktop .desktop-panel-facts>div:last-child span{
+    font-weight:650;
+    color:#272d36;
+  }
+  .site-desktop .desktop-panel-facts svg{width:18px;height:18px}
+  .site-desktop .desktop-participate{
+    min-height:47px;
+    margin-top:19px;
+    font-size:13px;
+  }
+}
+
 </style></head><body>
 <header class="head"><div class="wrap nav"><div class="brand-lockup"><a href="#inicio"><img class="logo" src="logo.png" alt="GIRO SINDEGTUR SP"></a><div class="acronym"><b>G</b>uias de turismo<br><b>I</b>nformações<br><b>R</b>oteiros<br><b>O</b>pções turísticas</div></div><button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button><nav class="navlinks" id="mainNav"><a href="#giro">Experiências</a><button data-future="city" type="button">City Tour</button><button data-future="excursoes" type="button">Excursões</button><button data-future="eventos" type="button">Eventos especiais</button><button id="openAbout" type="button">Sobre o projeto</button><a href="#central">Central</a><a href="#contato">Contato</a><a href="https://www.instagram.com/giro.sindegtur/" target="_blank" rel="noopener">Instagram ↗</a></nav></div></header>
 <div class="test-notice" role="status"><strong>Site em fase de testes, ainda não operacional.</strong> As informações são provisórias. Para dúvidas ou interesse nos passeios, escreva para <a href="mailto:giro.sindegtur@gmail.com">giro.sindegtur@gmail.com</a>.</div>
@@ -1567,7 +1634,7 @@ html{scrollbar-gutter:stable}
         <p class="desktop-panel-kicker">Passeio selecionado</p>
         <h2 id="desktopPanelTitle" tabindex="-1"></h2>
         <p id="desktopPanelDescription" class="desktop-panel-description"></p>
-        <p id="desktopPanelMeeting" class="desktop-panel-meeting"></p>
+        <p class="desktop-panel-meeting"><strong class="desktop-panel-meeting-label">Encontro e saída:</strong> <span id="desktopPanelMeeting"></span></p>
         <div class="desktop-panel-facts"><div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg><span id="desktopPanelDate"></span></div><div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="m7 21 3-6-2-3-3 2m5 1 2-5 3 3 3 1"/></svg><span>Caminhada · 2 horas</span></div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-7 7L3 12Z"/><circle cx="8" cy="8" r="1"/></svg><span id="desktopPanelPrice"></span></div></div>
         <a id="desktopPanelParticipate" class="desktop-participate" href="#" target="_blank" rel="noopener noreferrer">Quero participar →</a>
       </aside>
@@ -1735,7 +1802,7 @@ function openDesktopDetail(i,button,moveFocus=false){
   document.getElementById('desktopPanelPhoto').style.objectPosition=positionFor(i);
   document.getElementById('desktopPanelTitle').textContent=r[3]||'Histórias que o Centro Conta';
   document.getElementById('desktopPanelDescription').textContent=descriptionFor(r[3]);
-  document.getElementById('desktopPanelMeeting').textContent='Encontro e saída: '+localDeSaida(r[3]);
+  document.getElementById('desktopPanelMeeting').textContent=localDeSaida(r[3]);
   document.getElementById('desktopPanelDate').textContent=r[1]+', '+formatted(r[0])+' · '+r[2];
   document.getElementById('desktopPanelPrice').textContent='R$ '+Number(config.valorCaminhada??50).toLocaleString('pt-BR')+' por pessoa';
   const dataBR=r[0].slice(8,10)+'/'+r[0].slice(5,7)+'/'+r[0].slice(0,4);
