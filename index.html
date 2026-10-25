@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GIRO SINDEGTUR-SP · Experiências em São Paulo</title>
+<style>
+:root{--ink:#222;--muted:#777;--paper:#fff;--ice:#f8f8f6;--line:#e7e7e5;--red:#b20c2c;--green:#386f58}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);font-family:Arial,Helvetica,sans-serif;color:var(--ink)}button,input{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--red);outline-offset:3px}a{color:inherit;text-decoration:none}.wrap{max-width:1250px;padding:0 26px;margin:auto}.head{border-bottom:1px solid var(--line);background:#fffe;position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}.nav{height:76px;display:flex;justify-content:space-between;align-items:center}.logo{width:160px;height:65px;object-fit:contain}.navlinks{display:flex;gap:26px;font-size:13px;color:#555}.navlinks a:hover{color:var(--red)}.intro{text-align:center;padding:47px 0 15px}.kicker{color:var(--red);font-size:10px;font-weight:750;letter-spacing:.19em;text-transform:uppercase}.intro h1{font:normal clamp(30px,3.4vw,44px)/1.15 Georgia,serif;margin:13px 0}.intro p{font-size:13px;color:var(--muted);max-width:610px;margin:0 auto;line-height:1.6}.tourspace{background:var(--ice);border-block:1px solid var(--line);padding:0 0 45px}.wheel{width:min(1120px,100%);height:940px;margin:auto;position:relative}.rim{position:absolute;left:50%;top:50%;width:738px;height:738px;transform:translate(-50%,-50%);border:1px solid #e2e2df;border-radius:50%}.rim:before{content:"";position:absolute;inset:62px;border:1px dashed #e2e2df;border-radius:50%}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:320px;height:320px;border-radius:50%;border:1px solid #e2e2df;background:white;box-shadow:0 20px 60px #00000008;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.core img{width:245px;height:142px;object-fit:contain}.core .day{font:normal 25px Georgia,serif;margin-top:-8px}.core .range{font-size:12px;color:#777;margin-top:5px}.spin{display:flex;gap:8px;margin-top:18px}.spin button{border:1px solid #d8d8d5;border-radius:25px;background:white;color:#444;padding:8px 12px;font-size:11px}.spin button:hover{border-color:var(--red)}.entry{width:151px;height:67px;position:absolute;top:50%;left:50%;border:1px solid #e1e1df;border-radius:8px;background:#fff;padding:7px 9px;text-align:left;box-shadow:0 3px 10px #00000006;transition:transform .18s,border .18s;overflow:hidden}.entry:hover{border-color:#b6b6b4;transform:translateY(-3px)}.entry.selected{border:1.5px solid var(--red);background:#fffafa}.entry small{display:block;font-size:9px;color:#a3a3a3;letter-spacing:.03em;margin-bottom:3px}.entry strong{font-size:11px;line-height:1.22;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.entry:after{content:"";width:4px;height:4px;background:var(--red);border-radius:50%;position:absolute;right:8px;top:10px}.hint{text-align:center;color:#888;font-size:11px;margin-top:-22px}.detail{max-width:1070px;margin:30px auto 0;background:#fff;border:1px solid var(--line);border-radius:13px;padding:27px 32px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.detail .eyebrow{color:var(--red);font-size:10px;letter-spacing:.15em;font-weight:700}.detail h2{font:normal clamp(22px,2.5vw,32px) Georgia,serif;margin:9px 0}.detail p{color:var(--muted);font-size:13px;margin:0}.detail .right{min-width:210px;text-align:right}.detail .right strong{display:block;font-size:13px;margin-bottom:12px}.btn{border:0;border-radius:6px;background:#232323;color:#fff;padding:12px 18px;font-size:12px;font-weight:700;display:inline-block}.btn:hover{background:var(--red)}.btn:disabled{background:#eee;color:#aaa;cursor:not-allowed}.columns{display:grid;grid-template-columns:1.2fr .8fr;gap:45px;padding:64px 0}.columns h2{font:normal 29px Georgia,serif;margin:12px 0}.columns p{color:var(--muted);font-size:13px;line-height:1.8}.gridline{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;padding:13px 0;font-size:13px}.gridline span:last-child{color:#777}.aslink{border-bottom:1px solid #bbb;padding-bottom:3px;font-weight:600;font-size:12px}.demo{background:#fafafa;border:1px solid var(--line);border-radius:10px;padding:21px;margin-top:23px}.demo h3{font-size:14px;margin:0 0 12px}.demo .actions{display:flex;flex-wrap:wrap;gap:9px}.demo button{border:1px solid #ddd;background:white;border-radius:6px;padding:9px 13px;color:#777;font-size:12px}.notice{font-size:11px;color:#999;line-height:1.6;margin-top:10px}.footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:#777;display:flex;justify-content:space-between;gap:15px}.mobile-list{display:none}.import{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;color:#777;font-size:12px}.import label{cursor:pointer;text-decoration:underline}.import input{display:none}.import small{display:block;margin-top:5px;color:#999}.toplevel{font-size:11px;color:#999;text-align:center;margin-top:8px}@media(max-width:1100px){.wheel{height:880px}.entry{width:135px;font-size:10px}.rim{width:690px;height:690px}}@media(max-width:850px){.navlinks a:nth-child(2),.navlinks a:nth-child(4){display:none}.wheel{height:auto;padding:30px 18px 0}.rim,.wheel>.entry{display:none}.core{position:static;transform:none;margin:auto;width:260px;height:260px}.core img{width:190px}.mobile-list{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:28px 0}.mobile-list .entry{display:block;position:static;width:100%;height:74px}.hint{margin-top:0}.detail{margin:24px 18px 0;grid-template-columns:1fr;padding:24px}.detail .right{text-align:left}.columns{grid-template-columns:1fr;gap:25px}.footer{display:block}}@media(max-width:490px){.wrap{padding:0 17px}.intro{padding:34px 0 12px}.nav{height:66px}.logo{width:135px}.navlinks{gap:13px;font-size:11px}.mobile-list .entry{padding:6px}.mobile-list .entry strong{font-size:10px}.gridline{font-size:12px}}
+</style><style>
+
+.intro{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:60px;text-align:left;padding:42px 0 8px;max-width:1090px}.intro p{margin:0;max-width:510px}.intro h1{margin:9px 0 12px}.intro-mark{display:flex;align-items:center;gap:22px}.intro-mark img{width:230px;height:145px;object-fit:contain}.acronym{font-size:11px;line-height:1.8;color:#777;white-space:nowrap}.acronym b{color:#252525;font-size:13px}.entry{display:flex;gap:7px;align-items:center;padding:7px;width:170px;height:72px}.entry .thumb{width:44px;height:52px;object-fit:cover;flex-shrink:0;border-radius:4px;background:#eee}.entry .entry-text{min-width:0;flex:1}.entry strong{font-size:10.5px}.entry small{font-size:9px}.entry:after{display:none}.detail{grid-template-columns:1fr;padding:17px 28px;margin-top:12px;max-width:1070px}.detail h2{font-size:24px;margin:5px 0}.detail .right{display:none}.tourspace{padding-bottom:28px}.side-shade{position:fixed;inset:0;background:#0005;z-index:11;display:none}.side-shade.open{display:block}.side-panel{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:#fff;z-index:12;transform:translateX(102%);transition:transform .25s ease;box-shadow:-14px 0 60px #0002;overflow:auto}.side-panel.open{transform:translateX(0)}.panel-photo{width:100%;height:255px;object-fit:cover;background:#f2f2f2;display:block}.panel-inner{padding:27px 31px 40px}.panel-inner h2{font:normal 31px/1.18 Georgia,serif;margin:10px 0 15px}.panel-inner p{color:#666;font-size:13px;line-height:1.7}.panel-meta{background:#f8f8f6;border:1px solid #e9e9e6;border-radius:9px;padding:15px;margin:22px 0}.panel-meta b{display:block;font-size:13px}.panel-meta small{display:block;color:#888;font-size:11px;margin-top:4px}.panel-close{position:absolute;right:17px;top:15px;border:none;background:#fff;border-radius:50%;width:37px;height:37px;font-size:22px;box-shadow:0 2px 12px #0002}.panel-inner .btn{width:100%;text-align:center}.panel-inner .notice{margin-top:14px}.side-panel .eyebrow{font-size:10px;letter-spacing:.16em;font-weight:bold;color:var(--red)}.footer a:hover{color:var(--red)}@media(max-width:850px){.intro{grid-template-columns:1fr;gap:4px;padding-top:22px}.intro-mark img{width:180px;height:115px}.entry{height:81px}.mobile-list .entry{width:100%}.mobile-list .entry .thumb{width:37px;height:59px}.wheel{padding-top:10px}.detail{margin-top:16px}}@media(max-width:490px){.intro-mark{gap:5px}.intro-mark img{width:150px}.acronym{font-size:10px}.acronym b{font-size:11px}.panel-inner{padding:22px}.panel-photo{height:210px}}
+</style><style>
+
+.wheel{width:min(1010px,100%);height:860px}.rim{width:705px;height:705px}.core{width:350px;height:350px}.core img{width:280px;height:157px}.core .day{font-size:25px}.daycard{position:absolute;width:226px;min-height:150px;left:50%;top:50%;background:#fff;border:1px solid #e1e1de;border-radius:13px;padding:12px 13px;box-shadow:0 6px 20px #00000009}.dayhead{font-size:11px;font-weight:750;color:#555;margin-bottom:8px;display:flex;justify-content:space-between;gap:5px}.dayhead small{font-size:10px;font-weight:500;color:#999}.dayoption{width:100%;display:flex;align-items:center;gap:8px;padding:7px 0;border:0;background:transparent;text-align:left;color:#272727}.dayoption+.dayoption{border-top:1px solid #eeeeeb}.dayoption:hover .optname,.dayoption.selected .optname{color:var(--red)}.dayoption img{width:36px;height:34px;object-fit:cover;border-radius:5px;flex-shrink:0}.optiontext{flex:1;min-width:0}.optperiod{display:block;font-size:9px;color:#929292;margin-bottom:2px}.optname{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:10.5px;line-height:1.2;font-weight:600}.spin button{padding:9px 13px}.hint{margin-top:3px}.tourspace{padding-bottom:34px}@media(max-width:850px){.wheel{height:auto;min-height:0;padding:22px 18px 0}.wheel>.daycard,.rim{display:none}.core{position:static;transform:none;width:280px;height:280px}.core img{width:222px}.mobile-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:27px 0 0}.mobile-list .daycard{display:block;position:static;width:100%;height:auto;min-height:140px}.mobile-list .dayoption img{width:34px;height:32px}}@media(max-width:560px){.mobile-list{grid-template-columns:1fr}.mobile-list .daycard{min-height:0}.core{width:268px;height:268px}.dayoption img{width:41px;height:36px}.optname{font-size:11.5px}}
+</style><style>
+
+.wheel{width:min(960px,100%);height:835px}.rim{width:663px;height:663px}.rim:before{inset:52px}.core{width:337px;height:337px}.core img{width:270px;height:150px}.single-tour{position:absolute;left:50%;top:50%;width:155px;height:91px;display:flex;align-items:center;gap:7px;text-align:left;background:#fff;border:1px solid #e5e5e2;border-radius:12px;padding:8px;box-shadow:0 5px 14px #00000008;transition:box-shadow .2s,border-color .2s}.single-tour:hover{border-color:#bbb;box-shadow:0 11px 20px #00000015}.single-tour.selected{border-color:var(--red);background:#fffafa}.single-tour .thumb{width:39px;height:65px;object-fit:cover;border-radius:7px;flex-shrink:0}.single-tour .entry-text{min-width:0;flex:1}.single-tour small{display:block;color:#929292;font-size:9px;line-height:1.3;margin-bottom:4px}.single-tour strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;font-size:10.5px;line-height:1.22}.side-panel{width:min(372px,calc(100% - 28px));height:auto;max-height:calc(100vh - 66px);top:33px;right:25px;bottom:auto;border:1px solid #e6e6e3;border-radius:19px;transform:translateX(calc(100% + 50px));box-shadow:0 16px 65px #0003}.panel-photo{height:175px}.panel-inner{padding:20px 24px 25px}.panel-inner h2{font-size:25px;margin:7px 0 9px}.panel-inner p{font-size:12px;line-height:1.55}.panel-meta{margin:13px 0;padding:11px 13px}.panel-inner .notice{font-size:10.5px;margin-top:10px}.panel-close{top:12px;right:12px}.side-panel .btn{padding:11px}.tourspace{padding-bottom:29px}@media(max-width:850px){.wheel{height:auto}.wheel>.single-tour{display:none}.mobile-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mobile-list .single-tour{position:static;display:flex;width:100%;height:90px}.mobile-list .single-tour .thumb{height:65px;width:42px}}@media(max-width:560px){.mobile-list{grid-template-columns:1fr}.mobile-list .single-tour{height:77px}.mobile-list .single-tour strong{font-size:11.5px}.mobile-list .single-tour .thumb{height:58px;width:44px}.side-panel{top:12px;right:12px;max-height:calc(100vh - 24px);width:calc(100% - 24px)}.panel-photo{height:150px}.panel-inner{padding:17px 20px 20px}.panel-inner h2{font-size:23px}}
+</style><style>
+
+:root{--red:#b51532;--green:#39775a;--ice:#f8f9f6;--ink:#1f2522;--line:#e3e8e2}
+body{background:#fff;color:var(--ink)}
+.head{background:#ffffffed;box-shadow:0 3px 20px #24312608}.nav{height:68px}.logo{width:135px;height:57px}.navlinks{gap:9px;align-items:center}.navlinks a,.navlinks button{font-size:12px;font-weight:600;color:#4e5550;border:0;background:transparent;border-radius:18px;padding:9px 12px;white-space:nowrap}.navlinks a:hover,.navlinks button:hover{background:#f1f5f1;color:var(--green)}.navlinks .future-link{border:1px solid #dbe6dc;background:#f8fbf8;color:#335e49}.navlinks .future-link:hover{border-color:#a6cbb0;background:#ecf6ef}
+.intro{padding-top:31px;padding-bottom:15px}.intro h1{font-size:clamp(26px,2.8vw,37px);letter-spacing:-.025em}.intro-mark img{width:216px}.kicker{color:var(--red)}
+.tourspace{background:radial-gradient(circle at 50% 48%,#fff 0%,#f9fbf9 46%,#f4f8f4 100%);padding-bottom:23px}
+.wheel{height:824px}.rim{border-color:#cedbcf}.rim:before{border-color:#dce6df}.core{border:1px solid #dde8de;box-shadow:0 12px 36px #2d64420f,0 0 0 9px #fff9}.core img{width:282px;height:156px}.core .day{font-size:23px}.spin button{border-color:#d5e2d8;font-weight:600}.spin button:hover{background:#f0f8f1;color:var(--green);border-color:#adcbb5}
+.single-tour{border-color:#e0e9e1;border-radius:16px;box-shadow:0 5px 15px #1d493c0c}.single-tour .thumb{border-radius:9px}.single-tour:hover{border-color:#79a98b;box-shadow:0 9px 22px #2c68401b}.single-tour.selected{background:#fff8f9;border-color:var(--red);box-shadow:0 6px 18px #a30d2a13}.single-tour small{color:#728579}.single-tour strong{color:#2a312b}
+.hint{font-size:11.5px}.detail{border-radius:15px;background:#fff}.detail h2{font-size:22px}.columns{padding-top:45px;padding-bottom:52px}.columns h2{font-size:26px}.btn{border-radius:10px}.demo{background:#f7faf8}.footer{align-items:center}.footer a{color:var(--green);text-decoration:underline;text-underline-offset:4px}
+.side-shade{background:#18291c6b}.side-panel{right:38px;border-radius:21px;box-shadow:0 18px 64px #1f392638}.panel-meta{background:#f4f9f5;border-color:#deeadf}.panel-price{margin:0 0 13px!important;color:var(--green)!important;font-size:14px!important;font-weight:750}.panel-inner h2{font-size:25px}
+.future-panel{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:18px;background:#16291d70}.future-panel.open{display:flex}.future-card{position:relative;width:min(420px,100%);background:#fff;border-radius:21px;padding:39px 34px 30px;box-shadow:0 24px 70px #11231840}.future-symbol{width:43px;height:43px;display:grid;place-items:center;background:#eef6ef;border-radius:15px;color:var(--green);font-size:22px}.future-card h2{font:normal 28px/1.2 Georgia,serif;margin:17px 0 12px}.future-card p{font-size:14px;line-height:1.65;color:#626e65}.future-links{display:grid;gap:8px;margin-top:17px}.future-links a{padding:11px 14px;border-radius:9px;background:#f0f6f1;color:#335e49;font-size:12px;font-weight:700}
+@media(max-width:850px){.nav{height:auto;min-height:66px;gap:7px;flex-wrap:wrap;padding-top:6px;padding-bottom:9px}.navlinks{gap:4px;flex-wrap:wrap;justify-content:center}.navlinks a,.navlinks button{font-size:11px;padding:8px}.navlinks a:nth-child(2),.navlinks a:nth-child(4){display:inline-block}.intro{padding-top:22px}.wheel{height:auto}.side-panel{right:15px}}
+@media(max-width:560px){.nav{justify-content:center}.navlinks{width:100%}.navlinks a,.navlinks button{font-size:10px;padding:7px}.intro-mark img{width:160px}.intro h1{font-size:28px}.future-card{padding:33px 26px 25px}.side-panel{right:12px}}
+</style><style>
+
+.wrap{max-width:1280px}
+.nav{height:73px}.nav .logo{width:153px;height:63px}
+.intro{max-width:1100px;grid-template-columns:.75fr 1.25fr;gap:36px;padding:26px 0 19px}
+.intro-mark{min-height:114px;gap:22px;align-items:center;border-left:3px solid var(--red);padding-left:23px}
+.intro-mark img{display:none}.intro-mark:before{content:'GIRO';font:700 40px/1 Arial,Helvetica,sans-serif;letter-spacing:-.08em;color:#181818}
+.acronym{font-size:12px;line-height:1.7;color:#637068}.acronym b{font-size:13px;color:var(--red)}
+.intro h1{font-size:clamp(28px,3vw,39px);margin:10px 0 11px}
+.intro p{font-size:13px;max-width:560px}
+.wheel{width:min(1080px,100%);height:860px}
+.rim{width:720px;height:720px;border:1px solid #cbdccd;background:radial-gradient(circle,#fff0 67%,#f4f8f3b3 95%)}
+.rim:before{inset:67px;border-color:#e2ebe4}
+.core{width:404px;height:404px;border:1px solid #d9e7db;box-shadow:0 20px 55px #255b3717,0 0 0 12px #ffffffb5}
+.core img{width:313px;height:180px;object-fit:contain}
+.core .day{font-size:25px;font-weight:400;margin-top:0}
+.core .range{font-size:13px}
+.spin{margin-top:21px}.spin button{font-size:11.5px;padding:10px 12px}
+.single-tour{width:174px;height:104px;gap:10px;padding:9px;border-radius:17px;box-shadow:0 7px 18px #173d2410}
+.single-tour .thumb{width:49px;height:82px;border-radius:10px}
+.single-tour small{font-size:10px;line-height:1.3;margin-bottom:5px}
+.single-tour strong{font-size:11.5px;line-height:1.26;-webkit-line-clamp:3}
+.single-tour:hover{transform:translateY(-2px);box-shadow:0 12px 25px #1e472a22}
+.single-tour.selected{box-shadow:0 0 0 2px #c3224014,0 8px 20px #a30d2a15}
+.hint{margin-top:-4px}.tourspace{background:radial-gradient(ellipse at center,#fff 0%,#f9fbf8 48%,#f4f8f4 100%)}
+.detail{margin-top:19px}
+@media(max-width:960px){.intro{gap:12px}.wheel{height:auto;padding-top:18px}.wheel>.single-tour,.rim{display:none}.core{position:static;transform:none;width:312px;height:312px}.core img{width:245px;height:132px}.core .day{font-size:21px}.spin{margin-top:12px}.mobile-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:25px auto 10px;max-width:750px}.mobile-list .single-tour{position:static;display:flex;width:100%;height:102px}.mobile-list .single-tour .thumb{width:54px;height:78px}}
+@media(max-width:620px){.intro{grid-template-columns:1fr;gap:8px}.intro-mark{min-height:55px;padding-left:14px}.intro-mark:before{font-size:31px}.acronym{font-size:10px;line-height:1.4}.acronym b{font-size:10px}.intro h1{font-size:27px}.mobile-list{grid-template-columns:1fr;max-width:450px;gap:9px}.mobile-list .single-tour{height:85px}.mobile-list .single-tour .thumb{height:66px;width:51px}.core{width:290px;height:290px}.core img{width:230px}.spin button{font-size:10px;padding:9px 10px}}
+</style><style>
+
+:root{--ink:#202522;--muted:#647169;--ice:#f8f9f7;--line:#e8ece8;--red:#c4122b;--green:#366d52}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff}
+.head{border-bottom:1px solid #e9ece8;background:#fffffff5;box-shadow:none}
+.nav{height:83px;gap:22px}
+.brand-lockup{display:flex;align-items:center;gap:18px;flex-shrink:0}
+.brand-lockup .logo{width:142px;height:72px}
+.brand-lockup .acronym{font-size:10px;line-height:1.45;letter-spacing:.015em;color:#69756e;border-left:1px solid #e5e9e5;padding-left:17px}
+.brand-lockup .acronym b{color:#292929;font-size:10px;font-weight:700}
+.navlinks{gap:20px;justify-content:flex-end}
+.navlinks a,.navlinks button,.navlinks .future-link{background:transparent;border:0;border-radius:0;padding:9px 0;font-size:12px;letter-spacing:.005em;font-weight:500;color:#49534d}
+.navlinks a:hover,.navlinks button:hover,.navlinks .future-link:hover{background:transparent;color:var(--red);text-decoration:underline;text-underline-offset:6px}
+.intro{display:block;text-align:center;max-width:830px;padding:44px 22px 0}
+.intro-mark{display:none}
+.intro .kicker{font-size:10px;letter-spacing:.22em;color:var(--red)}
+.intro h1{font:normal clamp(31px,3.5vw,43px)/1.16 Georgia,'Times New Roman',serif;letter-spacing:-.025em;margin:13px auto 12px;max-width:740px}
+.intro p{font-size:13px;line-height:1.7;max-width:600px;margin:0 auto;color:#6b7770}
+.tourspace{position:relative;overflow:hidden;border:none;background:radial-gradient(ellipse 50% 54% at 50% 47%,#fff 12%,#fafbf9 65%,#f4f7f3 100%);padding-bottom:48px}
+.tourspace:before,.tourspace:after{content:"";pointer-events:none;position:absolute;border-radius:50%;border:1px solid #dfe9e020;transform:rotate(-17deg)}
+.tourspace:before{width:1150px;height:720px;left:calc(50% - 575px);top:73px}
+.tourspace:after{width:940px;height:940px;left:calc(50% - 470px);top:-70px;border-color:#e4ebe440}
+.wheel{height:845px;isolation:isolate;margin-top:0}
+.rim{width:722px;height:722px;border:1px solid #e1e7e2;background:transparent;box-shadow:0 0 0 26px #f4f8f326}
+.rim:before{inset:49px;border:1px dashed #e3e9e4}
+.core{width:404px;height:404px;border:1px solid #e9ece8;background:#fff;box-shadow:0 20px 60px #233b2714,0 0 0 10px #ffffffac}
+.core img{width:324px;height:181px}
+.core .day{font:normal 23px Georgia,serif;color:#333c35}
+.core .range{font-size:12px;color:#788279}
+.spin{gap:7px;margin-top:21px}
+.spin button{border-radius:9px;background:#fff;border:1px solid #e2e8e2;color:#48534b;padding:10px 11px;font-weight:500}
+.spin button:hover{background:#f5f8f5}
+.single-tour{width:174px;height:90px;padding:9px 10px;gap:9px;border:1px solid #e7ece7;border-radius:46px;background:#fff;box-shadow:0 7px 21px #354e3910;transition:transform .18s,border-color .18s,box-shadow .18s}
+.single-tour .thumb{height:64px;width:56px;border-radius:50%;box-shadow:0 0 0 2px #f0f3ef;flex-shrink:0}
+.single-tour .entry-text{overflow:hidden}
+.single-tour small{font-size:9.5px;line-height:1.25;margin-bottom:4px;color:#78827b}
+.single-tour strong{font-size:10.5px;line-height:1.25;font-weight:650;-webkit-line-clamp:3;color:#27322a}
+.single-tour:hover{transform:translateY(-3px);border-color:#a5c0aa;box-shadow:0 12px 25px #243c2921}
+.single-tour.selected{border-color:var(--red);background:#fff;box-shadow:0 0 0 3px #c4122b0b,0 10px 24px #5f192014}
+.detail{display:none}
+.hint{position:relative;margin-top:-7px;font-size:12px;color:#5f6e63}
+.hint b{font-weight:700;color:#25382a}
+.toplevel{max-width:850px;margin:12px auto 0;color:#8d9990;font-size:10px}
+.columns{padding:56px 0 68px;gap:75px}.columns h2{font-size:27px}.columns p{line-height:1.75}
+.side-panel{right:42px;max-height:calc(100vh - 74px);top:37px;border-radius:18px}
+.panel-photo{height:190px}
+.future-card{overflow:hidden;width:min(455px,100%);padding:0 0 29px;border-radius:20px;box-shadow:0 24px 75px #10271842}
+.future-photo{width:100%;height:190px;display:block;object-fit:cover;background:#e4eae4}
+.future-content{padding:25px 32px 0}
+.future-symbol{display:none}
+.future-card .kicker{font-size:10px;letter-spacing:.18em}
+.future-card h2{margin-top:10px;margin-bottom:9px;font-size:28px}
+.future-card p{font-size:13px;line-height:1.65;margin-top:0}
+.future-card .panel-close{z-index:2}
+@media(max-width:1000px){.nav{height:auto;min-height:80px;flex-wrap:wrap;gap:0;padding-top:7px;padding-bottom:8px}.navlinks{gap:17px}.wheel{height:auto}.rim,.wheel>.single-tour{display:none}.mobile-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:760px;margin:25px auto}.mobile-list .single-tour{height:90px;width:100%;border-radius:45px}.mobile-list .single-tour .thumb{height:64px;width:56px}.core{position:static;transform:none;width:318px;height:318px;margin:26px auto 0}.core img{width:249px;height:142px}.core .day{font-size:22px}.spin{margin-top:14px}}
+@media(max-width:620px){.nav{flex-direction:column;justify-content:center;padding:8px 14px 10px}.brand-lockup{gap:10px}.brand-lockup .logo{height:52px;width:110px}.brand-lockup .acronym{font-size:9px;line-height:1.28;padding-left:10px}.brand-lockup .acronym b{font-size:9px}.navlinks{justify-content:center;gap:12px;width:100%;margin-top:4px;flex-wrap:wrap}.navlinks a,.navlinks button,.navlinks .future-link{font-size:11px;padding:7px 0}.intro{padding-top:32px}.intro h1{font-size:30px}.intro p{font-size:12px}.mobile-list{grid-template-columns:1fr;max-width:460px}.mobile-list .single-tour{height:83px}.mobile-list .single-tour .thumb{height:61px;width:54px}.core{width:287px;height:287px}.core img{width:228px;height:128px}.future-photo{height:155px}.future-content{padding:21px 24px 0}.side-panel{right:12px;top:12px;max-height:calc(100vh - 24px)}}
+</style><style>
+
+:root{--red:#ed0021;--green:#3c6551}
+.intro{text-align:left;max-width:1040px;padding:37px 24px 0}
+.intro h1{max-width:none;font-size:clamp(28px,3.05vw,39px);margin:0 0 6px}
+.intro .subline{font:normal 18px/1.5 Georgia,serif;color:var(--red);margin:0}
+.tourspace{background:radial-gradient(ellipse at center,#fff 30%,#fafbf9 76%,#f4f6f4 100%);padding-bottom:30px}
+.tourspace:before,.tourspace:after{opacity:.25}
+.wheel{height:852px;max-width:1020px}
+.rim{width:695px;height:695px;border:2px solid var(--red);box-shadow:none}
+.rim:before{display:none}
+.core{width:364px;height:364px;border:0;box-shadow:0 10px 43px #2535250c;background:#fff}
+.core img{width:297px;height:160px}
+.core .day{font-size:24px;margin-top:-1px;color:#151515}
+.core .range{color:#747474;font-size:11px;margin-top:4px}
+.spin{display:flex;align-items:center;flex-direction:column;gap:4px;margin-top:14px}
+.spin button#next{width:41px;height:41px;border:0;border-radius:50%;background:var(--red);color:white;font-size:21px;padding:0;box-shadow:0 4px 11px #d700232a}
+.spin button#next:hover{background:#c9001c;transform:translateX(2px)}
+.spin-label{color:#666;font-size:11px}
+.single-tour{display:flex;flex-direction:column;align-items:stretch;gap:0;width:151px;height:119px;border:1px solid #e5e5e5;border-radius:11px;padding:0;background:#fff;text-align:left;overflow:hidden;box-shadow:0 6px 18px #1a1a1a12}
+.single-tour .thumb{width:100%;height:57px;min-height:57px;object-fit:cover;border-radius:0;box-shadow:none}
+.single-tour .entry-text{width:100%;padding:5px 22px 4px 9px;position:relative;flex:1}
+.single-tour small{font-size:8.9px;color:#777;line-height:1.2;margin:0 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.single-tour strong{font-size:10.2px;font-weight:700;line-height:1.14;color:#161616;-webkit-line-clamp:2}
+.single-tour:after{content:'›';position:absolute;bottom:10px;right:9px;font-size:23px;line-height:1;color:var(--red)}
+.single-tour:hover{transform:translateY(-3px);border-color:#ff8190;box-shadow:0 10px 23px #2222}
+.single-tour.selected{border:1.8px solid var(--red);background:#fff;box-shadow:0 9px 22px #b4132922}
+.btn,.panel-inner .btn{background:var(--red);color:#fff;border-radius:7px;font-size:14px;font-weight:700;padding:14px 18px}
+.btn:hover,.panel-inner .btn:hover{background:#c9001c}
+.side-panel{right:clamp(20px,6vw,86px);width:min(400px,calc(100vw - 40px));border-radius:13px;top:clamp(25px,8vh,90px);max-height:calc(100vh - 80px);box-shadow:0 18px 60px #141c1729}
+.panel-inner{padding:17px 22px 23px}.panel-photo{height:167px}
+.panel-inner h2{font-size:29px;line-height:1.12;margin:8px 0}.panel-inner p{font-size:13px;line-height:1.45}
+.side-panel .eyebrow{color:var(--red);font-size:10px}
+.panel-meta{border:0;border-top:1px solid #e6e6e6;border-radius:0;background:white;margin:14px 0 8px;padding:12px 0 3px}
+.panel-meta .meta-row{display:flex;gap:11px;align-items:center;font-size:12px;color:#3c4650;margin:7px 0}
+.panel-meta .meta-icon{font-size:17px;color:#222;min-width:21px;text-align:center}
+.meta-row #panel-price{display:inline;color:#3c4650;font-size:12px;font-weight:normal;margin:0}
+.hint{font-size:12px}.hint b{color:var(--red)}
+.toplevel,.import{display:none}
+
+.demo .notice,.columns .notice{display:none}
+.demo{border:0;background:#f7f8f7;border-radius:12px;padding:17px 20px}
+.contact-actions{display:flex;gap:19px;flex-wrap:wrap}.contact-actions a{font-size:12px;font-weight:700;color:var(--red);text-decoration:none}.contact-actions a:hover{text-decoration:underline}
+.mobile-list .single-tour{position:relative}
+@media(max-width:1000px){.mobile-list .single-tour{width:100%;height:112px;border-radius:11px;display:flex;flex-direction:column}.mobile-list .single-tour .thumb{width:100%;height:53px;min-height:53px;border-radius:0}.mobile-list .single-tour .entry-text{padding:6px 22px 4px 12px}.core{width:310px;height:310px}.core img{width:249px;height:135px}}
+@media(max-width:620px){.intro{padding-top:27px}.intro h1{font-size:28px}.intro .subline{font-size:16px}.mobile-list{grid-template-columns:repeat(2,minmax(0,1fr));max-width:500px;gap:9px}.mobile-list .single-tour{height:117px}.mobile-list .single-tour .thumb{height:56px;min-height:56px}.mobile-list .single-tour strong{font-size:10px}.core{width:270px;height:270px}.core img{width:220px;height:120px}.core .day{font-size:20px}.side-panel{top:12px;right:12px;width:calc(100% - 24px);max-height:calc(100vh - 24px)}}
+</style><style>
+
+html{scrollbar-gutter:stable}
+.intro{padding:21px 24px 0;max-width:1010px}
+.intro h1{font-size:clamp(27px,2.65vw,36px);margin-bottom:3px}
+.intro .subline{font-size:16px}
+.tourspace{padding-bottom:15px;overflow:hidden}
+.tourspace:before{width:1050px;height:530px;top:6px;left:calc(50% - 525px)}
+.tourspace:after{width:880px;height:510px;top:15px;left:calc(50% - 440px)}
+.wheel{height:555px;max-width:1050px;margin:0 auto}
+.rim{width:735px;height:468px;border:1.5px solid var(--red);background:transparent;box-shadow:0 0 0 17px #f4f4f41c}
+.core{width:426px;height:274px;border-radius:50%;box-shadow:0 11px 34px #1c1c1c0d,0 0 0 9px #ffffffc7}
+.core img{width:295px;height:132px}
+.core .day{font-size:23px;margin-top:-2px}
+.core .range{font-size:11px}
+.core{cursor:pointer}.core .spin{cursor:default}.core:focus-visible{outline:2px solid var(--red);outline-offset:5px}
+.spin{width:208px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:9px;gap:20px}
+.spin-nav{width:73px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.spin-nav button{width:36px;height:36px;border-radius:50%;padding:0;font-size:17px;font-weight:600}
+.spin-nav button#prev{border:1px solid #ddd;background:#fff;color:#555;box-shadow:none}
+.spin-nav button#prev:hover:not(:disabled){border-color:var(--red);color:var(--red)}
+.spin-nav button#prev:disabled{color:#d2d2d2;cursor:default;background:#fafafa}
+.spin-nav button#next{height:36px;width:36px;font-size:18px}
+.spin-nav .spin-label{font-size:10px;color:#7b7b7b}
+.single-tour{height:82px;width:130px}
+.single-tour .thumb{height:35px;min-height:35px}
+.single-tour .entry-text{padding-top:6px}
+.hint{margin-top:-7px}
+.side-panel{visibility:hidden;opacity:0;pointer-events:none;transform:translateX(112%);transition:transform .24s ease,opacity .18s ease,visibility .18s ease}
+.side-panel.open{visibility:visible;opacity:1;pointer-events:auto;transform:translateX(0)}
+.side-shade{visibility:hidden;opacity:0;display:block;pointer-events:none;transition:opacity .18s,visibility .18s}
+.side-shade.open{visibility:visible;opacity:1;pointer-events:auto}
+@media(max-width:1000px){.wheel{height:auto;min-height:0}.rim{display:none}.core{width:380px;height:275px;max-width:95%}.core img{width:280px;height:128px}.mobile-list{margin-top:19px}.hint{margin-top:6px}}
+@media(min-width:900px) and (max-width:1000px){.wheel{height:555px}.wheel>.single-tour{display:flex}.mobile-list{display:none}.rim{display:block}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:426px;height:274px;max-width:none;margin:0}.core img{width:295px;height:132px}}
+@media(max-width:620px){.wheel{height:auto}.core{width:295px;height:254px}.core img{width:225px;height:118px}.core .day{font-size:20px}.spin{width:200px;margin-top:5px}.spin-nav button{width:31px;height:31px}.spin-nav button#next{width:31px;height:31px}.intro{padding-top:19px}}
+</style><style>
+
+.wheel{height:590px}
+.rim{width:820px;height:496px}
+.core{width:482px;height:308px}
+.core img{width:330px;height:148px}
+.core .day{font-size:24px}
+.single-tour{width:145px;height:90px}
+.single-tour .thumb{height:41px;min-height:41px}
+.single-tour .entry-text{padding-top:5px}
+.hint{display:none}
+.intro h1{font-size:clamp(26px,2.55vw,35px)}
+.navlinks{gap:15px}
+.about-panel{position:fixed;inset:0;z-index:31;display:none;align-items:center;justify-content:center;padding:22px;background:#18291c70}
+.about-panel.open{display:flex}
+.about-card{position:relative;width:min(595px,100%);max-height:calc(100vh - 60px);overflow:auto;background:white;border-radius:18px;padding:39px 42px 34px;box-shadow:0 25px 80px #0002}
+.about-card .kicker{color:var(--red);font-size:10px;letter-spacing:.17em}
+.about-card h2{font:normal 30px/1.16 Georgia,serif;margin:13px 0 22px}
+.about-card p{font-size:13px;line-height:1.74;color:#555f58;margin:0 0 14px}
+.about-card p:last-child{color:var(--red);font-weight:700;margin-top:20px}
+.future-contact{display:none;margin-top:15px;text-align:center}
+.future-contact.show{display:block}
+@media(max-width:1000px){.wheel{height:auto}.mobile-list .single-tour{width:100%;height:112px}.mobile-list .single-tour .thumb{height:53px;min-height:53px}.core{width:380px;height:275px}.core img{width:280px;height:128px}}
+@media(min-width:980px) and (max-width:1000px){.wheel{height:590px}.rim{display:block}.wheel>.single-tour{display:flex}.mobile-list{display:none}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:482px;height:308px;max-width:none;margin:0}.core img{width:330px;height:148px}}
+@media(min-width:900px) and (max-width:979px){.wheel{height:auto}.rim,.wheel>.single-tour{display:none}.mobile-list{display:grid}.core{position:static;transform:none;margin:26px auto 0;width:380px;height:275px}.core img{width:280px;height:128px}}
+@media(max-width:620px){.core{width:295px;height:254px}.core img{width:225px;height:118px}.mobile-list .single-tour{height:117px}.mobile-list .single-tour .thumb{height:56px;min-height:56px}.about-card{padding:32px 24px 25px}.about-card h2{font-size:25px}}
+</style><style>
+
+.intro{padding-top:12px}
+.tourspace{padding-bottom:0}
+.wheel{height:510px}
+.rim{width:832px;height:432px}
+.core{width:562px;height:300px}
+.core img{width:370px;height:142px}
+.core .day{font-size:24px}
+@media(max-width:1000px){.wheel{height:auto}.core{width:380px;height:275px}.core img{width:280px;height:128px}}
+@media(min-width:980px) and (max-width:1000px){.wheel{height:510px}.core{width:562px;height:300px}.core img{width:370px;height:142px}}
+@media(max-width:620px){.core{width:295px;height:254px}.core img{width:225px;height:118px}}
+
+.hint,.detail{display:none!important}
+.contact-actions{gap:12px;align-items:center;margin-top:12px}
+.contact-actions a{display:inline-flex;align-items:center;gap:5px;background:#fff;border:1px solid #e5e7e3;padding:11px 14px;border-radius:10px;max-width:100%;word-break:break-word}
+.contact-actions a:hover{border-color:var(--red)}
+.columns{padding-top:42px}
+.columns .notice{display:none}
+.contact-actions a{color:#202020!important}
+.contact-actions a:hover,.contact-actions a:focus-visible{color:var(--red)!important}
+
+.side-panel{top:18px;max-height:calc(100dvh - 36px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#d6d6d3 transparent}
+.panel-photo{height:145px}
+.panel-inner{padding:14px 22px 19px}
+.panel-inner h2{font-size:24px;line-height:1.15;margin:6px 0 10px}
+.panel-inner p{margin:6px 0;font-size:12.5px;line-height:1.48}
+.panel-inner .panel-meeting{padding:10px 12px;margin:12px 0 0;border-radius:9px;background:#f8f8f6;color:#454545;font-size:11.5px;line-height:1.4}
+.panel-meeting strong{display:block;color:#2c302d;margin-bottom:3px;font-size:11.5px}
+.panel-meta{margin:10px 0 8px;padding-top:7px}
+.panel-meta .meta-row{margin:5px 0}
+@media(max-width:620px){.side-panel{top:10px;max-height:calc(100dvh - 20px)}.panel-photo{height:126px}.panel-inner{padding:13px 18px 17px}}
+
+.side-panel{position:fixed;inset:50% auto auto 50%;width:min(550px,calc(100vw - 36px));height:420px;max-height:calc(100dvh - 30px);display:grid;grid-template-columns:45% 55%;overflow-y:auto;overflow-x:hidden;border-radius:17px;scrollbar-width:none;box-shadow:0 22px 68px #0003;transform:translate(-50%,-47%) scale(.98);transition:transform .2s ease,opacity .2s ease,visibility .2s ease}
+.side-panel::-webkit-scrollbar{display:none}
+.side-panel.open{transform:translate(-50%,-50%) scale(1)}
+.panel-photo{height:420px;min-height:0;width:100%;object-fit:cover;object-position:center center;border-radius:17px 0 0 17px;align-self:stretch}
+.panel-inner{padding:25px 20px 20px;min-width:0;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.panel-inner h2{font-size:22px;line-height:1.16;margin:6px 0 10px}
+.panel-inner p{font-size:12.5px;line-height:1.46;margin:5px 0}
+.panel-inner .panel-meeting{margin:8px 0 0;padding:7px 8px}
+.panel-meta{margin:8px 0 9px;padding:4px 0}
+.panel-meta .meta-row{font-size:11px}
+.panel-inner .btn{padding:11px 9px;font-size:12px;white-space:nowrap}
+.panel-close{z-index:2;right:10px;top:10px;width:34px;height:34px}
+.footer-acronym{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.footer-acronym b{color:#c81737;font-size:1.12em}
+.about-card p:last-child{color:#222;font-weight:600}
+.schedule-heading{font-size:13px;font-weight:700;color:#303030;margin:25px 0 4px}
+.special-schedule{font-size:12px;line-height:1.7;color:#777;margin:16px 0 0}
+@media(max-width:620px){.side-panel{width:min(380px,calc(100vw - 20px));height:auto;max-height:calc(100dvh - 20px);display:flex;flex-direction:column}.panel-photo{height:155px;min-height:0;flex:none;border-radius:17px 17px 0 0}.panel-inner{padding:14px 19px 18px;display:block}.panel-inner h2{font-size:23px}.panel-inner p{font-size:12.5px}.panel-inner .panel-meeting{margin:8px 0 0}.panel-meta{margin:7px 0 9px}}
+@media(max-height:470px) and (min-width:621px){.side-panel{height:calc(100dvh - 12px);max-height:calc(100dvh - 12px)}.panel-photo{height:100%}.panel-inner{padding:12px 17px;overflow-y:auto}}
+</style></head><body>
+<header class="head"><div class="wrap nav"><div class="brand-lockup"><a href="#inicio"><img class="logo" src="logo.png" alt="GIRO SINDEGTUR SP"></a><div class="acronym"><b>G</b>uias de turismo<br><b>I</b>nformações<br><b>R</b>oteiros<br><b>O</b>pções turísticas</div></div><nav class="navlinks"><a href="#giro">Experiências</a><button data-future="city" type="button">City Tour</button><button data-future="excursoes" type="button">Excursões</button><button data-future="eventos" type="button">Eventos especiais</button><button id="openAbout" type="button">Sobre o projeto</button><a href="#central">Central</a><a href="#contato">Contato</a><a href="https://www.instagram.com/giro.sindegtur/" target="_blank" rel="noopener">Instagram ↗</a></nav></div></header>
+<main id="inicio"><div class="intro wrap"><h1>São Paulo tem muitas histórias. Descubra a sua próxima.</h1><p class="subline">Passeios com guia de turismo.</p></div>
+<section class="tourspace" id="giro"><div class="wheel" id="wheel"><div class="rim"></div><div class="core" id="returnToCurrent" role="button" tabindex="0" aria-label="Voltar à programação atual"><img src="logo.png" alt="GIRO SINDEGTUR SP"><div class="day" id="cycleLabel">Passeios da semana</div><div class="range" id="cycleRange">2 a 7 de novembro de 2026</div><div class="spin"><div class="spin-nav"><button id="prev" aria-label="Ver semana anterior">←</button><span class="spin-label">Anterior</span></div><div class="spin-nav"><button id="next" aria-label="Ver próxima semana">➜</button><span class="spin-label">Próxima</span></div></div></div><div class="mobile-list" id="mobileList"></div></div><div class="hint">Escolha uma experiência para saber mais. Caminhadas a <b>R$ 50 por pessoa</b>.</div><div class="detail" id="agenda"><div><div class="eyebrow" id="chosen-date">ESCOLHA UMA EXPERIÊNCIA</div><h2 id="chosen-name">As histórias estão no GIRO.</h2><p id="chosen-info"></p></div><div class="right"><strong id="chosen-time"></strong><button class="btn" id="ticket" disabled>Ingresso</button></div></div></section>
+<section class="wrap columns"><div id="central"><span class="kicker">Nossa Central</span><h2>Estamos no Centro de São Paulo.</h2><p>Galeria R. Monteiro, Rua 24 de Maio, 77 — República, São Paulo. Perto da Galeria do Rock. Loja em definição.</p><p>A Central é o ponto de encontro e partida da maioria das caminhadas. Se um roteiro tiver outra saída, o local será informado na confirmação.</p><a class="aslink" href="https://www.google.com/maps/search/?api=1&query=Rua+24+de+Maio+77+Sao+Paulo+SP" target="_blank" rel="noopener noreferrer">Como chegar · Google Maps ↗</a><div class="demo" id="contato"></div></div><div><span class="kicker">Atendimento e saídas</span><h2>Horários da Central</h2><div class="gridline"><span>Segunda a sexta</span><span>9h às 17h</span></div><div class="gridline"><span>Sábado</span><span>9h até o fechamento da galeria</span></div><div class="gridline"><span>Domingos e feriados</span><span>Central fechada</span></div><h3 class="schedule-heading">Passeios regulares · segunda a sábado</h3><div class="gridline"><span>Manhã</span><span>Saída às 9h40</span></div><div class="gridline"><span>Tarde</span><span>Saída às 14h10</span></div><p class="special-schedule">Passeios especiais em domingos, feriados e outros horários, conforme programação e disponibilidade.</p></div></section></main><footer class="wrap footer"><div>GIRO SINDEGTUR-SP · Apoio institucional do <a href="https://www.sindegtursp.com.br/" target="_blank" rel="noopener noreferrer">SINDEGTUR-SP ↗</a></div><div><span class="footer-acronym"><span><b>G</b>uias de turismo</span> • <span><b>I</b>nformações</span> • <span><b>R</b>oteiros</span> • <span><b>O</b>pções turísticas</span></span></div></footer>
+<div class="side-shade" id="shade"></div><aside class="side-panel" id="sidePanel" role="dialog" aria-modal="true" aria-labelledby="panel-title"><button class="panel-close" id="panelClose" aria-label="Fechar ficha">×</button><img class="panel-photo" id="panel-photo" src="assets/photo-000.jpg" alt="Fotografia da experiência"><div class="panel-inner"><span class="eyebrow">SEU PRÓXIMO PASSEIO</span><h2 id="panel-title"></h2><p id="panel-desc"></p><div class="panel-meta"><div class="meta-row"><span class="meta-icon">♙</span><span>Caminhada · 2 horas</span></div><div class="meta-row"><span class="meta-icon">◷</span><span id="panel-date"></span></div><div class="meta-row"><span class="meta-icon">◇</span><span id="panel-price">R$ 50 por pessoa</span></div></div><a id="participate" class="btn" href="#" target="_self">Quero participar →</a></div></aside>
+<div class="future-panel" id="futurePanel" role="dialog" aria-modal="true" aria-labelledby="futureTitle"><div class="future-card"><button class="panel-close" id="futureClose" aria-label="Fechar novidade">×</button><img class="future-photo" id="futurePhoto" src="assets/photo-008.jpg" alt="Imagem de São Paulo"><div class="future-content"><span class="kicker">Novas possibilidades</span><h2 id="futureTitle"></h2><p id="futureMessage"></p><div class="future-links" id="futureLinks"></div><a id="futureContact" class="btn future-contact" href="#">Consultar passeio para seu grupo →</a></div></div></div>
+<div class="about-panel" id="aboutPanel" role="dialog" aria-modal="true" aria-labelledby="aboutTitle"><div class="about-card"><button class="panel-close" id="aboutClose" aria-label="Fechar apresentação">×</button><span class="kicker">Conheça o projeto</span><h2 id="aboutTitle">Sobre o GIRO SINDEGTUR-SP</h2><div id="aboutText"></div></div></div>
+<script src="conteudo.js"></script><script src="calendario.js"></script><script>
+const base=[
+['2026-11-02','Segunda','09:40','Histórias que o Centro Conta','e01'],['2026-11-02','Segunda','14:10','Histórias que o Centro Conta','e02'],
+['2026-11-03','Terça','09:40','Giro por Sampa','e03'],['2026-11-03','Terça','14:10','Histórias que o Centro Conta','e04'],
+['2026-11-04','Quarta','09:40','Histórias que o Centro Conta','e05'],['2026-11-04','Quarta','14:10','Igrejas católicas do Centro Histórico','e06'],
+['2026-11-05','Quinta','09:40','Tour Igrejas Históricas do Centro de SP','e07'],['2026-11-05','Quinta','14:10','O Conde do Ipiranga','e08'],
+['2026-11-06','Sexta','09:40','Histórias que o Centro Conta','e09'],['2026-11-06','Sexta','14:10','Os Edifícios Contam a História de São Paulo','e10'],
+['2026-11-07','Sábado','09:40','Metrô: a cidade subterrânea','e11'],['2026-11-07','Sábado','14:10','Histórias que o Centro Conta','e12'],
+['2026-11-09','Segunda','09:40','Histórias que o Centro Conta','e13'],['2026-11-09','Segunda','14:10','Histórias que o Centro Conta','e14'],
+['2026-11-10','Terça','09:40','Museus e Galerias de São Paulo','e15'],['2026-11-10','Terça','14:10','Histórias que o Centro Conta','e16'],
+['2026-11-11','Quarta','09:40','São Paulo Multicultural','e17'],['2026-11-11','Quarta','14:10','Parque do Jaraguá — Trilhas','e18'],
+['2026-11-12','Quinta','09:40','Caminhos, Saberes e Sabores — Liberdade','e19'],['2026-11-12','Quinta','14:10','Histórias que o Centro Conta','e20'],
+['2026-11-13','Sexta','09:40','São Paulo em Manchetes','e21'],['2026-11-13','Sexta','14:10','Histórias que o Centro Conta','e22'],
+['2026-11-14','Sábado','09:40','Histórias que o Centro Conta','e23'],['2026-11-14','Sábado','14:10','Histórias que o Centro Conta','e24']];
+const config=window.GIRO_CONTEUDO||{};
+const months=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];let cycle=0,weekIndex=0,earliestWeekIndex=0,selected=0,source=base.map(x=>[...x]);
+function photoFor(i){const registro=current()[i]||[],title=registro[3]||'',codigo=registro[4]||'';if(/Jaraguá|trilha/i.test(title))return 'assets/atrativos/parque-do-jaragua.jpg';if(/São Paulo em Manchetes/i.test(title))return 'assets/sao-paulo-em-manchetes-ilustracao.png';if(/Liberdade|Multicultural/i.test(title))return 'assets/photo-003.jpg';if(/Conde do Ipiranga/i.test(title))return 'assets/experiencias/e08.png';if(config.fotosPorCodigo?.[codigo])return config.fotosPorCodigo[codigo];if(config.fotos?.[title])return config.fotos[title];if(/Metrô|subterrâne/i.test(title))return 'assets/photo-005.jpg';if(/museus|galerias/i.test(title))return 'assets/photo-010.jpg';if(/Igrejas|Centro/i.test(title))return 'assets/photo-000.jpg';return 'assets/photo-004.jpg'}
+function positionFor(i){return config.posicoesFotos?.[photoFor(i)]||'50% 50%'}
+function descriptionFor(name){if(config.descricoes?.[name])return config.descricoes[name];return 'Passeie com o GIRO SINDEGTUR-SP e descubra histórias e perspectivas sobre São Paulo em uma experiência acompanhada por guia de turismo.'}
+function dateShift(d,shift){let dt=new Date(d+'T12:00:00Z');dt.setUTCDate(dt.getUTCDate()+shift);return dt.toISOString().slice(0,10)}
+function formatted(date){let d=new Date(date+'T12:00:00Z');return d.getUTCDate()+' '+months[d.getUTCMonth()]}
+function current(){const shifted=source.map(v=>[dateShift(v[0],cycle*14),...v.slice(1)]);if(Math.abs(cycle)%2===1){for(let i=0;i+1<shifted.length;i+=2){if(shifted[i][0]===shifted[i+1][0]){const first=[shifted[i][3],shifted[i][4]];shifted[i][3]=shifted[i+1][3];shifted[i][4]=shifted[i+1][4];shifted[i+1][3]=first[0];shifted[i+1][4]=first[1]}}}for(const row of shifted){if(row[0].startsWith('2026-12-')){const titles=config.programacaoDezembro2026?.[row[0].slice(8,10)];if(titles)row[3]=titles[row[2]==='14:10'?1:0]}}return shifted}
+function show(i){selected=i;const r=current()[i];document.getElementById('chosen-date').textContent=r[1]+' · '+formatted(r[0])+' · '+(r[2]==='09:40'?'MANHÃ':'TARDE');document.getElementById('chosen-name').textContent=r[3]||'Histórias que o Centro Conta';document.getElementById('chosen-time').textContent='Saída às '+r[2];document.getElementById('chosen-info').textContent='';document.querySelectorAll('[data-idx]').forEach(b=>b.classList.toggle('selected',+b.dataset.idx===i))}
+function makeDayCard(rows,start){const card=document.createElement('div');card.className='daycard';const head=document.createElement('div');head.className='dayhead';head.textContent=rows[start][1]+' · '+formatted(rows[start][0]);const tag=document.createElement('small');tag.textContent='2 saídas';head.append(tag);card.append(head);for(let j=0;j<2;j++){const i=start+j,r=rows[i];if(!r)continue;const b=document.createElement('button');b.className='dayoption';b.dataset.idx=i;b.setAttribute('aria-label',r[2]+' '+r[3]);const img=document.createElement('img');img.src=photoFor(i);img.style.objectPosition=positionFor(i);img.alt='';const text=document.createElement('span');text.className='optiontext';const period=document.createElement('span');period.className='optperiod';period.textContent=r[2]+(j===0?' · Manhã':' · Tarde');const name=document.createElement('span');name.className='optname';name.textContent=r[3]||'Roteiro em definição';text.append(period,name);b.append(img,text);b.onclick=()=>openSide(i);card.append(b)}return card}
+function makeSingle(r,i){const b=document.createElement('button');b.className='single-tour';b.dataset.idx=i;b.setAttribute('aria-label',r[1]+' '+formatted(r[0])+' '+r[2]+' '+r[3]);const img=document.createElement('img');img.className='thumb';img.src=photoFor(i);img.style.objectPosition=positionFor(i);img.alt='';const content=document.createElement('span');content.className='entry-text';const when=document.createElement('small');when.textContent=r[1]+' '+formatted(r[0])+' · '+r[2];const name=document.createElement('strong');name.textContent=r[3]||'Roteiro em definição';content.append(when,name);b.append(img,content);b.onclick=()=>openSide(i);return b}
+function localDeSaida(titulo){return /Jaraguá|Ipiranga|Metrô|Museus e Galerias|Multicultural|Liberdade/i.test(titulo)?'Local a confirmar para este roteiro.': (config.pontoDeEncontro||'Rua 24 de Maio, 77, São Paulo')+'.'}
+const meeting=document.createElement('p');meeting.className='panel-meeting';meeting.innerHTML='<strong>Encontro e saída</strong><span id="panel-meeting-text"></span>';document.getElementById('panel-desc').after(meeting);
+function openSide(i){show(i);let r=current()[i],titulo=r[3]||'Histórias que o Centro Conta';document.getElementById('panel-title').textContent=titulo;document.getElementById('panel-desc').textContent=descriptionFor(titulo);document.getElementById('panel-meeting-text').textContent=localDeSaida(titulo);document.getElementById('panel-date').textContent=r[1]+' · '+formatted(r[0])+' · '+r[2];document.getElementById('panel-photo').src=photoFor(i);document.getElementById('panel-photo').style.objectPosition=positionFor(i);document.getElementById('panel-price').textContent='R$ '+Number(config.valorCaminhada??50).toLocaleString('pt-BR')+' por pessoa';const dataCompleta=r[0].slice(8,10)+'/'+r[0].slice(5,7)+'/'+r[0].slice(0,4);const subject='Interesse | '+titulo+' | '+dataCompleta+' | '+r[2];const body='Olá, equipe GIRO SINDEGTUR-SP!\n\nGostaria de consultar a disponibilidade para este passeio:\nRoteiro: '+titulo+'\nData: '+dataCompleta+'\nHorário: '+r[2]+'\nParticipantes: ____ pessoa(s)\nNome para contato: ____\n\nPor favor, enviem as orientações de reserva e pagamento.\n\nObrigado(a)!';document.getElementById('participate').href='mailto:'+encodeURIComponent(config.contatoEmail||'giro.sindegtur@gmail.com')+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);document.getElementById('sidePanel').classList.add('open');document.getElementById('shade').classList.add('open');document.body.style.overflow='hidden';document.getElementById('panelClose').focus()}
+function closeSide(){document.getElementById('sidePanel').classList.remove('open');document.getElementById('shade').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('panelClose').onclick=closeSide;document.getElementById('shade').onclick=closeSide;
+function closeFuture(){document.getElementById('futurePanel').classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('[data-future]').forEach(button=>button.addEventListener('click',()=>{const kind=button.dataset.future;const item=config.novidades?.[kind]||{};document.getElementById('futureTitle').textContent=item.titulo||(kind==='city'?'City Tour':'Excursões');document.getElementById('futureMessage').textContent=item.mensagem||'Em breve, mais informações sobre esta nova experiência do GIRO SINDEGTUR-SP.';document.getElementById('futurePhoto').src=item.imagem||(kind==='city'?'assets/photo-008.jpg':'assets/photo-009.jpg');const list=document.getElementById('futureLinks');list.replaceChildren();for(const link of item.links||[]){if(!link.url||!(/^(https:\/\/|\.\/|arquivos\/)/.test(link.url)))continue;const anchor=document.createElement('a');anchor.href=link.url;anchor.target='_blank';anchor.rel='noopener noreferrer';anchor.textContent=link.titulo||'Ver informações e PDF ↗';list.append(anchor)}const contactLink=document.getElementById('futureContact');contactLink.classList.toggle('show',kind==='eventos');const mensagem='Olá, equipe GIRO SINDEGTUR-SP!\n\nGostaria de consultar um passeio para minha turma.\nTipo de grupo: ____\nQuantidade de pessoas: ____\nData e horário desejados: ____\nInteresse ou tema: ____\n\nAguardo as possibilidades. Obrigado(a)!';contactLink.href='mailto:'+encodeURIComponent(config.contatoEmail||'giro.sindegtur@gmail.com')+'?subject='+encodeURIComponent('Passeio para minha turma | GIRO SINDEGTUR-SP')+'&body='+encodeURIComponent(mensagem);document.getElementById('futurePanel').classList.add('open');document.body.style.overflow='hidden';document.getElementById('futureClose').focus()}));
+document.getElementById('futureClose').onclick=closeFuture;document.getElementById('futurePanel').addEventListener('click',e=>{if(e.target.id==='futurePanel')closeFuture()});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSide();closeFuture()}});
+function closeAbout(){document.getElementById('aboutPanel').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('openAbout').onclick=()=>{const data=config.sobre||{};document.getElementById('aboutTitle').textContent=data.titulo||'Sobre o GIRO SINDEGTUR-SP';const area=document.getElementById('aboutText');area.replaceChildren();for(const paragraph of data.paragrafos||[]){const p=document.createElement('p');p.textContent=paragraph;area.append(p)}document.getElementById('aboutPanel').classList.add('open');document.body.style.overflow='hidden';document.getElementById('aboutClose').focus()};
+document.getElementById('aboutClose').onclick=closeAbout;document.getElementById('aboutPanel').onclick=e=>{if(e.target.id==='aboutPanel')closeAbout()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAbout()});
+function paint(){cycle=Math.floor(weekIndex/2);const rows=current(),wheel=document.getElementById('wheel'),mobile=document.getElementById('mobileList');wheel.querySelectorAll('.daycard,.single-tour').forEach(x=>x.remove());mobile.replaceChildren();const offset=((weekIndex%2)+2)%2*12;const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());const visible=rows.slice(offset,offset+12).map((r,n)=>({r,i:offset+n})).filter(x=>x.r[0]>=today&&!window.GIRO_CALENDARIO.isClosedDate(x.r[0],config.datasSemOperacao||[]));if(!visible.length){weekIndex++;return paint()}for(let n=0;n<visible.length;n++){const {r,i}=visible[n],b=makeSingle(r,i);const angle=(-90+n*360/visible.length)*Math.PI/180;const rx=410,ry=210;b.style.left='calc(50% + '+Math.round(Math.cos(angle)*rx)+'px - 73px)';b.style.top='calc(50% + '+Math.round(Math.sin(angle)*ry)+'px - 45px)';wheel.append(b);mobile.append(makeSingle(r,i))}const shown=visible.map(x=>x.r);document.getElementById('cycleRange').textContent=formatted(shown[0][0])+' a '+formatted(shown.at(-1)[0])+' de '+shown[0][0].slice(0,4);document.getElementById('cycleLabel').textContent='Passeios da semana';document.getElementById('prev').disabled=weekIndex<=earliestWeekIndex;selected=visible[0].i;show(selected)}
+document.getElementById('prev').onclick=()=>{if(weekIndex>earliestWeekIndex){weekIndex--;paint()}};
+document.getElementById('next').onclick=()=>{weekIndex++;paint()};
+const homeGIRO=document.getElementById('returnToCurrent');
+function resetToCurrent(){weekIndex=earliestWeekIndex;paint()}
+homeGIRO.addEventListener('click',e=>{if(e.target.closest('button'))return;resetToCurrent()});
+homeGIRO.addEventListener('keydown',e=>{if(e.target!==homeGIRO)return;if(e.key==='Enter'||e.key===' '){e.preventDefault();resetToCurrent()}});
+const contact=document.getElementById('contato');
+contact.replaceChildren();
+const contactTitle=document.createElement('h3');contactTitle.textContent='Fale com o GIRO SINDEGTUR-SP';
+const contactActions=document.createElement('div');contactActions.className='contact-actions';
+const emailLink=document.createElement('a');emailLink.href='mailto:'+(config.contatoEmail||'giro.sindegtur@gmail.com');emailLink.textContent='E-mail · '+(config.contatoEmail||'giro.sindegtur@gmail.com');
+const phoneLink=document.createElement('a');phoneLink.href=config.contatoWhatsAppLink||'https://wa.me/55119XXXXXXXX';phoneLink.target='_blank';phoneLink.rel='noopener noreferrer';phoneLink.textContent='WhatsApp · '+(config.contatoTelefone||'+55 11 9XXXX-XXXX');phoneLink.title='Número provisório, ainda sem atendimento';
+const socialLink=document.createElement('a');socialLink.href='https://www.instagram.com/giro.sindegtur/';socialLink.target='_blank';socialLink.rel='noopener noreferrer';socialLink.textContent='Instagram ↗';
+contactActions.append(emailLink,phoneLink,socialLink);contact.append(contactTitle,contactActions);
+const todayBR=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+for(let w=0;w<104&&dateShift(source[0][0],w*7+5)<todayBR;w++)weekIndex=w+1;
+earliestWeekIndex=weekIndex;
+paint();
+</script></body></html>
