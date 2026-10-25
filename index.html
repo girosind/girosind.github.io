@@ -363,6 +363,1094 @@ html{scrollbar-gutter:stable}
   .gridline{font-weight:400}
   .footer{font-size:10px;line-height:1.6}
 }
+</style><style>
+/* Layout de experiência único, da órbita desktop à grade dos telefones. */
+.site-desktop{display:none}
+@media(min-width:0px){
+  :root{--dred:#e60023;--dline:#e3e4e7;--dmuted:#62666d}
+  body{overflow-x:hidden}
+  body>.head,body>.test-notice,body>main,body>.footer{display:none}
+  .site-desktop{display:block;background:white;color:#1c2030;font:400 16px/1.5 'Inter','Segoe UI',Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+  .site-desktop *{box-sizing:border-box}
+  .desktop-shell{width:min(1296px,calc(100% - 64px));margin-inline:auto}
+  .desktop-notice{min-height:30px;padding:6px 16px;background:#f5f5f5;text-align:center;font-size:11px;line-height:18px;color:var(--dmuted)}
+  .desktop-header{height:82px;border-bottom:1px solid var(--dline)}
+  .desktop-header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:32px}
+  .desktop-logo{display:block;width:112px;height:60px;object-fit:contain}
+  .desktop-nav{display:flex;align-items:center;gap:13px}
+  .desktop-nav a,.desktop-nav button{display:inline-flex;align-items:center;gap:7px;min-height:44px;border:0;background:transparent;font:500 12px 'Inter','Segoe UI',Arial,sans-serif;color:#1c2030;white-space:nowrap;padding:0}
+  .desktop-nav svg{width:19px;height:19px;stroke-width:1.6;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+  .desktop-nav a:hover,.desktop-nav button:hover{color:var(--dred)}
+  .desktop-nav a+a,.desktop-nav button+button,.desktop-nav a+button,.desktop-nav button+a{padding-left:12px;border-left:1px solid var(--dline)}
+  .desktop-menu-button{display:none}
+  .desktop-experiences{display:grid;grid-template-columns:minmax(0,816px) minmax(0,432px);gap:48px;align-items:start;padding-top:28px}
+  .desktop-experiences-left{min-width:0}
+  .desktop-hero{min-height:126px;padding:0 16px 22px;text-align:left}
+  .desktop-hero h1{margin:0;font:700 34px/1.2 'Iowan Old Style','Baskerville','Palatino Linotype',Georgia,serif;letter-spacing:-.75px}
+  .desktop-hero p{margin:8px 0 0;font-size:17px;line-height:25px;color:#71778b}
+  .desktop-stage{position:relative;width:816px;height:730px}
+  .desktop-orbit-line{position:absolute;left:78px;top:55px;width:660px;height:620px;border:1px solid #d4dae4;border-radius:50%;pointer-events:none}
+  .desktop-orbit-dots{position:absolute;inset:0;pointer-events:none}
+  .desktop-orbit-dot{position:absolute;width:5px;height:5px;border-radius:50%;transform:translate(-50%,-50%)}
+  .desktop-orbit-center{position:absolute;left:408px;top:365px;width:300px;transform:translate(-50%,-50%);text-align:center;background:transparent}
+  .desktop-orbit-center img{display:block;width:146px;height:78px;object-fit:contain;margin:0 auto 14px}
+  .desktop-orbit-center h2{margin:0;font:400 29px/35px 'Iowan Old Style',Georgia,serif}
+  .desktop-orbit-center p{margin:8px 0 22px;font-size:14px;line-height:21px;color:var(--dmuted)}
+  .desktop-week-controls{display:flex;justify-content:center;gap:36px}
+  .desktop-week-controls button{width:86px;padding:0;border:0;background:transparent;color:#18181b;font:400 12px/16px Arial,sans-serif;cursor:pointer}
+  .desktop-round-arrow{display:grid;place-items:center;width:44px;height:44px;margin:0 auto 7px;border:1px solid #aeb2b9;border-radius:50%;font-size:21px}
+  .desktop-week-controls button:disabled{opacity:.35;cursor:default}
+  .desktop-card{position:absolute;width:136px;height:118px;transform:translate(-50%,-50%);display:flex;flex-direction:column;overflow:hidden;padding:0;border:1px solid #dfe4eb;border-radius:11px;background:#fff;box-shadow:0 4px 14px #242c4010;color:#1c2030;cursor:pointer;text-align:center;transition:border-color .2s,box-shadow .2s}
+  .desktop-card[aria-pressed="true"]{border:1.5px solid var(--dred)}
+  .desktop-card:hover{box-shadow:0 5px 18px #242c4022}
+  .desktop-card:focus-visible{outline:3px solid #e60023;outline-offset:3px}
+  .desktop-card img{display:block;width:calc(100% - 12px);height:58px;flex-shrink:0;object-fit:cover;margin:0 6px;border-radius:3px}
+  .desktop-card-date{display:flex;justify-content:space-between;gap:4px;width:100%;padding:4px 7px 3px;font-size:11px;line-height:14px;color:#333}
+  .desktop-card-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:5px 5px 0;font-size:12px;font-weight:600;line-height:15px}
+  .desktop-tour-panel{position:relative;min-width:0;margin-top:68px;padding:10px 0 0 26px;border-left:1px solid var(--dline);background:#fff}
+  .desktop-tour-panel[hidden]{display:none!important}
+  .desktop-panel-close{position:absolute;top:0;right:0;width:44px;height:44px;border:0;background:transparent;font-size:28px;font-weight:300;color:#18181b}
+  .desktop-panel-photo{display:block;width:100%;aspect-ratio:1.55;max-height:245px;object-fit:cover;border-radius:7px}
+  .desktop-panel-kicker{margin:15px 0 7px;font-size:10px;font-weight:700;line-height:16px;letter-spacing:1.2px;text-transform:uppercase;color:#788098}
+  .desktop-tour-panel h2{margin:0;font:600 30px/1.15 'Iowan Old Style','Baskerville',Georgia,serif}
+  .desktop-tour-panel h2:focus{outline:2px solid var(--dred);outline-offset:3px}
+  .desktop-panel-description{margin:12px 0 12px;font-size:15px;line-height:22px;color:#485065}
+  .desktop-panel-meeting{margin:0 0 16px;color:var(--dmuted);font-size:12px;line-height:1.5}
+  .desktop-panel-facts{display:grid;gap:10px}
+  .desktop-panel-facts>div{display:flex;align-items:flex-start;gap:12px;font-size:14px;line-height:22px}
+  .desktop-participate{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin-top:20px;padding:10px 18px;background:var(--dred);color:white;border-radius:6px;font-size:15px;font-weight:600;box-shadow:0 4px 10px #e6002320}
+  .desktop-participate:hover{background:#c9001e}
+  .desktop-experiences.panel-hidden{grid-template-columns:816px;justify-content:center}
+  .desktop-about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:30px;padding:0 16px 32px;border-bottom:1px solid var(--dline)}
+  .desktop-about-rule{width:52px;height:2px;margin-bottom:16px;background:var(--dred)}
+  .desktop-about div>p{margin:0 0 12px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--dmuted)}
+  .desktop-about h2{margin:0;font:700 38px/1.18 Georgia,serif}
+  .desktop-about>p{margin:0;max-width:520px;font-size:17px;line-height:27px}
+  .desktop-practical{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:28px 0 32px}
+  .desktop-practical>div{min-width:0;padding:0 28px}
+  .desktop-practical>div:first-child{padding-left:16px}
+  .desktop-practical>div+div{border-left:1px solid var(--dline)}
+  .desktop-practical h3{margin:0 0 18px;font-size:21px;font-weight:500}
+  .desktop-practical p{margin:0 0 12px;font-size:14px;line-height:22px}
+  .desktop-practical .desktop-note{font-size:12px;color:var(--dmuted)}
+  .desktop-practical a{color:var(--dred);font-size:14px}
+  .desktop-contact-strip{background:#f5f5f5}
+  .desktop-contact-strip .desktop-shell{display:grid;grid-template-columns:140px 1.5fr 1fr .8fr;align-items:center;min-height:72px;padding-block:14px}
+  .desktop-contact-strip h3{margin:0;font:400 22px Georgia,serif}
+  .desktop-contact-strip a,.desktop-contact-strip span{font-size:13px;overflow-wrap:anywhere}
+  .desktop-contact-strip .desktop-shell>a,.desktop-contact-strip .desktop-shell>span{display:flex;align-items:center;gap:12px;padding:0 24px;min-width:0;border-left:1px solid #d4d6da}
+  .desktop-footer{display:flex;align-items:center;gap:24px;min-height:54px;padding-block:16px;font-size:11px}
+  .desktop-footer>span+span{border-left:1px solid var(--dline);padding-left:24px}
+}
+@media(max-width:1359px){
+  .desktop-menu-button{display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:10px 14px;background:white;border:1px solid var(--dline);border-radius:6px;font-size:14px}
+  .desktop-header-inner{position:relative}
+  .desktop-nav{display:none;position:absolute;top:72px;right:0;z-index:8;width:min(350px,100%);padding:12px;background:white;border:1px solid var(--dline);box-shadow:0 10px 25px #00000010}
+  .desktop-nav.is-open{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+  .desktop-nav a,.desktop-nav button{border:0!important;padding:9px!important;white-space:normal;font-size:13px}
+  .desktop-experiences{display:block;padding-top:28px}
+  .desktop-hero{min-height:0;padding:0 0 18px}
+  .desktop-hero h1{font-size:clamp(26px,3vw,34px)}
+  .desktop-stage{width:100%;height:auto;display:flex;flex-direction:column}
+  .desktop-orbit-line,.desktop-orbit-dots{display:none}
+  .desktop-orbit-center{position:static;left:auto;top:auto;transform:none;order:0;display:flex;flex-wrap:wrap;align-items:center;gap:12px;width:100%;margin-bottom:18px;padding:14px;border:1px solid var(--dline);border-radius:8px;text-align:left}
+  .desktop-orbit-center img{display:none}
+  .desktop-orbit-center h2{font-size:23px;line-height:1.3}
+  .desktop-orbit-center p{margin:0;flex:1 1 150px;font-size:13px}
+  .desktop-week-controls{gap:8px}
+  .desktop-week-controls button{width:58px;font-size:10px}
+  .desktop-round-arrow{width:34px;height:34px;margin-bottom:3px}
+  .desktop-cards{order:1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .desktop-card{position:relative!important;left:auto!important;top:auto!important;transform:none!important;width:100%;height:auto;min-height:0;padding:0 0 12px}
+  .desktop-card img{width:calc(100% - 20px);height:auto;margin:0 10px;aspect-ratio:16/9}
+  .desktop-card-date{padding:9px 11px 6px;font-size:12px}
+  .desktop-card-title{display:block;overflow:visible;margin:8px 10px 0;font-size:14px;line-height:1.4;font-weight:500;overflow-wrap:anywhere}
+  .desktop-tour-panel{margin:25px 0 0;padding:22px;border:1px solid var(--dline);border-radius:8px;max-width:760px}
+  .desktop-panel-close{top:4px;right:5px}
+  .desktop-panel-photo{width:100%;max-height:310px;aspect-ratio:16/9}
+  .desktop-tour-panel h2{font-size:28px}
+  .desktop-about{margin-top:44px}
+  .desktop-experiences.panel-hidden{display:block}
+}
+@media(max-width:1023px){
+  .desktop-shell{width:calc(100% - 48px)}
+  .desktop-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .desktop-about{grid-template-columns:1fr;gap:16px}
+  .desktop-practical{grid-template-columns:1fr;gap:18px}
+  .desktop-practical>div,.desktop-practical>div:first-child{padding:0}
+  .desktop-practical>div+div{border:0;border-top:1px solid var(--dline);padding-top:18px}
+  .desktop-contact-strip .desktop-shell{grid-template-columns:1fr 1fr;gap:12px}
+  .desktop-contact-strip .desktop-shell>a,.desktop-contact-strip .desktop-shell>span{border:0;padding:0}
+}
+@media(max-width:767px){
+  .desktop-shell{width:calc(100% - 32px)}
+  .desktop-header{height:72px}
+  .desktop-logo{width:88px;height:58px}
+  .desktop-nav{top:62px}
+  .desktop-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .desktop-card img{aspect-ratio:4/3}
+  .desktop-hero h1{font-size:26px}
+  .desktop-tour-panel{padding:16px}
+  .desktop-contact-strip .desktop-shell{grid-template-columns:1fr}
+  .desktop-contact-strip .desktop-shell>a,.desktop-contact-strip .desktop-shell>span{padding:0}
+  .desktop-footer{flex-wrap:wrap}
+}
+@media(max-width:359px){
+  .desktop-cards{grid-template-columns:1fr}
+  .desktop-shell{width:calc(100% - 28px)}
+  .desktop-hero h1{font-size:25px}
+}
+/* Acabamento da ficha e dos pictogramas, sem adicionar conteúdo. */
+.desktop-panel-facts svg,.desktop-practical h3 svg,.desktop-contact-strip svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.desktop-panel-facts svg{color:#d80729}
+.desktop-practical h3{display:flex;align-items:center;gap:11px;letter-spacing:-.3px}
+.desktop-practical h3 svg{color:#cf1735}
+.desktop-practical p{color:#555d70}
+.desktop-practical p strong{color:#242c3a;font-weight:600}
+.desktop-practical>div+div{border-color:#e7e9ed}
+.desktop-contact-strip{background:white;border-top:1px solid #e7e9ed;border-bottom:1px solid #e7e9ed}
+.desktop-contact-strip h3{font:500 22px 'Iowan Old Style',Georgia,serif}
+.desktop-contact-strip svg{color:#5b6577}
+.desktop-contact-strip a:hover,.desktop-footer a:hover{color:#d80729}
+.desktop-footer{color:#6b7280}
+.desktop-footer a{color:#343945}
+@media(min-width:1360px){
+  .desktop-experiences{position:relative}
+  .desktop-hero{position:absolute;left:864px;top:19px;width:432px;min-height:0;padding:0 7px 0 0;text-align:left}
+  .desktop-hero::before{content:'';display:block;width:38px;height:2px;margin-bottom:12px;background:#d80729}
+  .desktop-hero h1{font-size:26px;line-height:1.16;letter-spacing:-.4px}
+  .desktop-hero p{font-size:15px;margin-top:7px}
+  .desktop-tour-panel{margin-top:137px;padding:0 0 0 25px}
+  .desktop-panel-photo{max-height:205px;aspect-ratio:1.75}
+  .desktop-panel-kicker{margin-top:12px}
+  .desktop-tour-panel h2{font-size:27px}
+  .desktop-panel-description{font-size:14px;line-height:20px;margin:10px 0}
+  .desktop-panel-meeting{margin-bottom:13px}
+  .desktop-panel-facts{gap:8px}
+  .desktop-panel-facts>div{font-size:13px;line-height:19px}
+  .desktop-participate{min-height:44px;margin-top:16px;font-size:14px}
+  .desktop-contact-strip .desktop-shell{min-height:65px}
+  .desktop-experiences.panel-hidden .desktop-hero{position:static;width:auto;margin-bottom:14px;text-align:center}
+  .desktop-experiences.panel-hidden .desktop-hero::before{margin-inline:auto}
+}
+/* Refino da composição desktop: chamada à esquerda, órbita ao centro,
+   ficha curta da primeira segunda-feira à faixa da quarta de manhã. */
+@media(min-width:1360px){
+  .desktop-experiences{padding-top:22px}
+  .desktop-hero{position:static;left:auto;top:auto;width:auto;min-height:123px;padding:3px 10px 13px 6px;text-align:left}
+  .desktop-hero::before{display:none}
+  .desktop-hero h1{font-size:29px;line-height:1.18;letter-spacing:-.55px}
+  .desktop-hero p{margin-top:7px;font-size:15px}
+  .desktop-orbit-center{left:432px}
+  .desktop-tour-panel{margin-top:170px;padding:0 0 0 22px}
+  .desktop-panel-photo{height:155px;max-height:155px;aspect-ratio:auto;object-fit:cover}
+  .desktop-panel-kicker{margin:9px 0 4px;font-size:10px}
+  .desktop-tour-panel h2{font-size:24px;line-height:1.14}
+  .desktop-panel-description{font-size:13px;line-height:18px;margin:8px 0}
+  .desktop-panel-meeting{font-size:11.5px;line-height:17px;margin:0 0 10px}
+  .desktop-panel-facts{gap:6px}
+  .desktop-panel-facts>div{font-size:12px;line-height:18px;gap:9px}
+  .desktop-panel-facts svg{width:17px;height:17px}
+  .desktop-participate{width:min(220px,100%);min-height:36px;margin:12px auto 0;padding:7px 12px;font-size:12px;font-weight:600;border-radius:5px;box-shadow:none}
+  .desktop-about>p{transform:translateY(16px)}
+  .desktop-practical>div:nth-child(2) p+p,.desktop-practical>div:nth-child(3) p+p{border-top:1px solid #e6e8ed;padding-top:11px}
+}
+/* Composição compacta baseada no segundo estudo visual aprovado. */
+@media(min-width:1360px){
+  .desktop-experiences{grid-template-columns:700px 300px;gap:42px;justify-content:center;padding-top:27px}
+  .desktop-experiences-left{position:relative;min-width:0}
+  .desktop-hero{position:absolute;left:0;top:0;width:275px;min-height:0;padding:0;text-align:center;z-index:1}
+  .desktop-hero h1{font-size:21px;line-height:1.15;letter-spacing:-.3px}
+  .desktop-hero p{margin-top:5px;font-size:12px;line-height:17px}
+  .desktop-stage{width:816px;height:730px;transform:scale(.84);transform-origin:top left;margin-bottom:-116.8px}
+  .desktop-orbit-center{left:432px}
+  .desktop-tour-panel{width:300px;max-width:300px;margin-top:45px;padding:9px 11px 12px;border:1px solid #e1e5eb;border-radius:9px;box-shadow:0 5px 18px #2530470c;background:white}
+  .desktop-panel-close{top:-12px;right:-12px;width:28px;height:28px;border:1px solid #e1e5eb;border-radius:50%;background:#fff;font-size:20px;line-height:1;box-shadow:0 2px 7px #00000010}
+  .desktop-panel-photo{height:126px;max-height:126px;width:100%;border-radius:5px}
+  .desktop-panel-kicker{font-size:9px;letter-spacing:.75px;margin:8px 0 3px}
+  .desktop-tour-panel h2{font-size:22px;line-height:1.12}
+  .desktop-panel-description{font-size:11.5px;line-height:16px;margin:6px 0}
+  .desktop-panel-meeting{font-size:10.5px;line-height:14px;margin:0 0 7px}
+  .desktop-panel-facts{gap:5px;border-top:1px solid #e9ebef;padding-top:8px}
+  .desktop-panel-facts>div{gap:8px;font-size:11px;line-height:16px}
+  .desktop-panel-facts svg{width:15px;height:15px}
+  .desktop-participate{width:100%;min-height:34px;margin-top:10px;padding:7px 10px;font-size:12px;border-radius:5px}
+  .desktop-experiences.panel-hidden{grid-template-columns:700px;justify-content:center}
+  .desktop-experiences.panel-hidden .desktop-hero{position:absolute;width:275px;left:0;top:0;text-align:center;margin:0}
+  .desktop-experiences.panel-hidden .desktop-hero::before{display:none}
+  .desktop-about{margin-top:35px}
+}
+/* Ajuste de alinhamento após conferência em tela de 1366px:
+   a chamada não deve ocupar a área de nenhum cartão. */
+@media(min-width:1360px){
+  .desktop-hero{left:-110px;top:-5px}
+  .desktop-stage{transform:translateY(-24px) scale(.84);margin-bottom:-140.8px}
+  .desktop-orbit-center h2{font-weight:500;letter-spacing:-.45px}
+  .desktop-orbit-center p{font-size:13px;letter-spacing:.1px}
+}
+/* Layout de apresentação final: textos com espaço próprio e órbita nítida.
+   As posições internas são escaladas nos dados, sem reduzir as fontes. */
+@media(min-width:1360px){
+  .desktop-experiences{grid-template-columns:700px 300px;gap:36px;justify-content:center;padding-top:124px}
+  .desktop-hero{position:absolute;left:130px;top:16px;width:min(1000px,calc(100% - 260px));min-height:0;padding:0;text-align:left}
+  .desktop-hero::before{display:block;width:43px;height:2px;margin:0 0 10px;background:#d80729}
+  .desktop-hero h1{font-size:28px;line-height:1.12;letter-spacing:-.6px}
+  .desktop-hero p{font-size:14px;line-height:19px;margin-top:6px}
+  .desktop-stage{width:702px;height:628px;transform:none;margin-bottom:0}
+  .desktop-orbit-line{left:67.08px;top:47.3px;width:567.6px;height:533.2px}
+  .desktop-orbit-center{left:350.88px;top:313.9px;width:300px}
+  .desktop-orbit-center img{width:130px;height:70px;margin-bottom:10px}
+  .desktop-orbit-center h2{font-size:26px;line-height:32px;font-weight:500}
+  .desktop-orbit-center p{font-size:12px;margin:6px 0 16px}
+  .desktop-week-controls{gap:20px}
+  .desktop-week-controls button{font-size:11px}
+  .desktop-round-arrow{width:40px;height:40px}
+  .desktop-card{width:118px;height:106px;border-radius:9px}
+  .desktop-card img{height:49px}
+  .desktop-card-title{font-size:11.5px;line-height:14px}
+  .desktop-tour-panel{margin-top:26px}
+  .desktop-experiences.panel-hidden{grid-template-columns:700px}
+  .desktop-experiences.panel-hidden .desktop-hero{left:130px;top:16px;width:min(1000px,calc(100% - 260px));text-align:left}
+  .desktop-experiences.panel-hidden .desktop-hero::before{display:block;margin:0 0 10px}
+  .desktop-about{margin-top:42px}
+}
+/* Acabamento de tipografia, cor dos pictogramas e assinatura do GIRO. */
+.site-desktop{--giro-ui:'Inter','Segoe UI',Arial,Helvetica,sans-serif;--giro-display:'Iowan Old Style','Baskerville','Palatino Linotype',Georgia,serif}
+.site-desktop h1,.site-desktop h2,.site-desktop .desktop-contact-strip h3{font-family:var(--giro-display)}
+.site-desktop .desktop-nav a,.site-desktop .desktop-nav button{font-family:var(--giro-ui);font-size:12px;font-weight:500;line-height:1.2;color:#1c2030}
+.site-desktop .desktop-nav svg{width:18px;height:18px;stroke:#c72238;stroke-width:1.8}
+.site-desktop .desktop-nav a:hover,.site-desktop .desktop-nav button:hover{color:#1c2030}
+.site-desktop .desktop-nav a:hover span,.site-desktop .desktop-nav button:hover span{text-decoration:underline;text-decoration-color:#d6d8df;text-underline-offset:4px}
+.desktop-footer-acronym{font-family:var(--giro-ui);color:#475166}
+.desktop-footer-acronym b{font-weight:700;color:#c72238}
+.desktop-footer-acronym i{font-style:normal;color:#acb1bb;margin:0 3px}
+#futureContact.future-contact.show{background:#1468c9;color:#fff;border-color:#1468c9}
+#futureContact.future-contact.show:hover{background:#0e55a8;color:#fff}
+@media(min-width:1360px){
+  .desktop-experiences-left{position:static}
+  .desktop-hero{left:50%;top:14px;transform:translateX(-50%);width:min(1000px,calc(100% - 64px));text-align:center}
+  .desktop-hero::before{margin:0 auto 10px}
+  .desktop-hero h1{font-family:var(--giro-display);font-size:28px;line-height:1.12}
+  .desktop-experiences.panel-hidden .desktop-hero{left:50%;top:14px;transform:translateX(-50%);width:min(1000px,calc(100% - 64px));text-align:center}
+  .desktop-experiences.panel-hidden .desktop-hero::before{margin:0 auto 10px}
+}
+
+/* O avanço da programação recebe o único destaque de navegação da órbita. */
+.site-desktop #desktopNext:not(:disabled) .desktop-round-arrow{
+  background:#c72238;
+  border-color:#c72238;
+  color:#fff;
+  box-shadow:0 5px 14px rgba(199,34,56,.14);
+}
+.site-desktop #desktopNext:not(:disabled):hover .desktop-round-arrow{
+  background:#ab1830;
+  border-color:#ab1830;
+}
+.site-desktop #desktopNext:focus-visible .desktop-round-arrow{
+  outline:2px solid #c72238;
+  outline-offset:3px;
+}
+
+/* Identidade cromática: um vermelho consistente para todos os acentos. */
+.site-desktop{--giro-brand-red:#e60023;--dred:#e60023}
+.site-desktop .desktop-nav svg,
+.site-desktop .desktop-panel-facts svg,
+.site-desktop .desktop-practical h3 svg,
+.site-desktop .desktop-footer-acronym b{color:var(--giro-brand-red);stroke:var(--giro-brand-red)}
+.site-desktop .desktop-hero::before,
+.site-desktop .desktop-about-rule{background:var(--giro-brand-red)}
+.site-desktop .desktop-card[aria-pressed="true"]{border-color:var(--giro-brand-red)}
+.site-desktop #desktopNext:not(:disabled) .desktop-round-arrow{
+  background:var(--giro-brand-red);border-color:var(--giro-brand-red);color:white;
+}
+.site-desktop #desktopNext:not(:disabled):hover .desktop-round-arrow{background:var(--giro-brand-red);border-color:var(--giro-brand-red)}
+.site-desktop #desktopNext:focus-visible .desktop-round-arrow{outline-color:var(--giro-brand-red)}
+
+/* Abertura editorial apenas no computador; a experiência mobile validada permanece. */
+.desktop-hero-institutional{display:none}
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences{padding-top:149px}
+  .site-desktop .desktop-hero{
+    left:50%;top:14px;transform:translateX(-50%);
+    display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);
+    align-items:center;column-gap:26px;
+    width:min(1036px,calc(100% - 72px));text-align:left;
+  }
+  .site-desktop .desktop-hero::before{display:none}
+  .site-desktop .desktop-hero-institutional{display:block;padding:3px 27px 3px 0;border-right:1px solid #e6e8ed}
+  .site-desktop .desktop-hero-eyebrow{display:block;margin-bottom:5px;font-size:9px;letter-spacing:1.6px;font-weight:650;color:var(--giro-brand-red)}
+  .site-desktop .desktop-hero-institutional h2{margin:0;font-size:22px;line-height:1.12;letter-spacing:-.3px}
+  .site-desktop .desktop-hero-institutional p{max-width:410px;margin:7px 0 0;font-size:11px;line-height:1.42;color:#626a7b}
+  .site-desktop .desktop-hero-invitation{padding-left:18px}
+  .site-desktop .desktop-hero-invitation h1{font-size:27px;line-height:1.12;letter-spacing:-.5px}
+  .site-desktop .desktop-hero-invitation p{margin-top:7px;font-size:13px;line-height:18px}
+  .site-desktop .desktop-about{display:none}
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    display:grid;text-align:left;left:50%;top:14px;transform:translateX(-50%);
+    width:min(1036px,calc(100% - 72px));
+  }
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero::before{display:none}
+}
+
+/* Refinamento: chamada do passeio em primeiro plano; sindicato na seção inferior. */
+.desktop-notice-after-header{display:none}
+.desktop-hero-highlight{color:var(--giro-brand-red)}
+.site-desktop .desktop-contact-strip h3{
+  font-family:var(--giro-ui);font-size:21px;font-weight:500;letter-spacing:-.3px;
+}
+@media(min-width:1360px){
+  .site-desktop>.desktop-notice:first-child{display:none}
+  .site-desktop .desktop-notice-after-header{display:block;border-bottom:1px solid #eceef1}
+  .site-desktop .desktop-experiences{grid-template-columns:744px 320px;gap:34px;padding-top:116px}
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    display:block;left:50%;top:11px;transform:translateX(-50%);
+    width:min(1000px,calc(100% - 64px));text-align:center;
+  }
+  .site-desktop .desktop-hero-institutional{display:none}
+  .site-desktop .desktop-hero-invitation{padding-left:0}
+  .site-desktop .desktop-hero-invitation h1{
+    font-size:30px;line-height:1.13;letter-spacing:-.55px;font-weight:700;
+  }
+  .site-desktop .desktop-hero-invitation p{font-size:14px;margin-top:7px}
+  .site-desktop .desktop-stage{width:743px;height:665px}
+  .site-desktop .desktop-orbit-line{left:70.98px;top:50.05px;width:600.6px;height:564.2px}
+  .site-desktop .desktop-orbit-center{left:371.28px;top:332.15px}
+  .site-desktop .desktop-orbit-center img{width:143px;height:77px}
+  .site-desktop .desktop-card{width:124px;height:112px}
+  .site-desktop .desktop-card img{height:54px}
+  .site-desktop .desktop-card-title{font-size:11.5px;line-height:14px}
+  .site-desktop .desktop-tour-panel{width:320px;max-width:320px;margin-top:20px}
+  .site-desktop .desktop-panel-photo{height:158px;max-height:158px}
+  .site-desktop .desktop-about{display:grid;margin-top:26px}
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:744px}
+}
+
+/* Estudo da constelação: os doze passeios circundam a ficha central. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{
+    display:block;position:relative;padding-top:131px;width:100%;
+  }
+  .site-desktop .desktop-experiences-left{display:block;position:static}
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:5px;left:50%;width:min(1120px,calc(100% - 70px));
+    transform:translateX(-50%);text-align:left;
+  }
+  .site-desktop .desktop-hero-invitation h1{font-size:36px;line-height:1.06;font-weight:400;letter-spacing:-.7px}
+  .site-desktop .desktop-hero-invitation p{font-size:14px;color:var(--giro-brand-red);font-weight:500}
+  .site-desktop .desktop-stage{width:1130px;height:700px;margin-inline:auto;margin-bottom:0}
+  .site-desktop .desktop-orbit-line{
+    left:90px;top:50px;width:950px;height:600px;
+    border-color:#e1e5eb;
+  }
+  .site-desktop .desktop-card{width:132px;height:105px;border-radius:11px}
+  .site-desktop .desktop-card img{height:48px}
+  .site-desktop .desktop-card-title{font-size:11px;line-height:13.5px}
+  .site-desktop .desktop-orbit-center{
+    left:1030px;top:16px;transform:translateX(-50%);
+    width:195px;padding:0;z-index:2;
+  }
+  .site-desktop .desktop-experiences:not(.panel-hidden) .desktop-orbit-center>img,
+  .site-desktop .desktop-experiences:not(.panel-hidden) .desktop-orbit-center>h2{display:none}
+  .site-desktop .desktop-orbit-center p{font-size:11px;margin:0 0 4px}
+  .site-desktop .desktop-week-controls{gap:8px}
+  .site-desktop .desktop-week-controls button{width:65px;font-size:10px}
+  .site-desktop .desktop-round-arrow{width:31px;height:31px;margin-bottom:3px;font-size:17px}
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center{
+    left:565px;top:350px;transform:translate(-50%,-50%);
+    width:290px;
+  }
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center>img{display:block;width:135px;height:70px}
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center>h2{display:block;font-size:25px}
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center p{margin:6px 0 12px}
+  .site-desktop .desktop-tour-panel{
+    position:absolute;left:50%;top:296px;transform:translateX(-50%);
+    z-index:3;width:352px;max-width:352px;margin:0;
+    padding:11px 14px 14px;border-radius:13px;
+    box-shadow:0 10px 38px rgba(25,33,52,.10);
+  }
+  .site-desktop .desktop-panel-photo{height:148px;max-height:148px}
+  .site-desktop .desktop-tour-panel h2{font-size:23px;line-height:1.12}
+  .site-desktop .desktop-panel-description{font-size:11.5px;line-height:15px}
+  .site-desktop .desktop-panel-meeting{font-size:10.5px;line-height:14px}
+  .site-desktop .desktop-panel-facts{gap:4px;padding-top:6px}
+  .site-desktop .desktop-participate{margin-top:8px;min-height:33px}
+  .site-desktop .desktop-about{margin-top:5px}
+}
+
+/* Moldura de experiências: simetria retangular, sem órbita circular. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{padding-top:121px}
+  .site-desktop .desktop-stage{width:1100px;height:610px}
+  .site-desktop .desktop-stage::before{
+    content:'';position:absolute;left:202px;top:126px;width:696px;height:354px;
+    border:1px solid #eceef2;border-radius:22px;
+    background:linear-gradient(135deg,#fcfcfd,#f8f9fb);
+    pointer-events:none;
+  }
+  .site-desktop .desktop-orbit-line,
+  .site-desktop .desktop-orbit-dots{display:none}
+  .site-desktop .desktop-card{
+    width:136px;height:103px;border-radius:10px;
+    box-shadow:0 5px 16px rgba(38,48,67,.08);
+  }
+  .site-desktop .desktop-card img{height:47px}
+  .site-desktop .desktop-card-title{font-size:11.25px;line-height:13.5px}
+  .site-desktop .desktop-orbit-center{left:1012px;top:76px;width:162px;z-index:2}
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center{
+    left:550px;top:310px;width:300px;
+  }
+  .site-desktop .desktop-tour-panel{
+    top:250px;width:424px;max-width:424px;
+    border-radius:13px;padding:12px 17px 14px;
+    box-shadow:0 12px 32px rgba(22,32,53,.09);
+  }
+  .site-desktop .desktop-panel-photo{height:116px;max-height:116px}
+  .site-desktop .desktop-panel-kicker{margin:7px 0 3px}
+  .site-desktop .desktop-tour-panel h2{font-size:22px}
+  .site-desktop .desktop-panel-description{margin:5px 0;font-size:11px;line-height:14px}
+  .site-desktop .desktop-panel-meeting{margin:0 0 6px;font-size:10px;line-height:13px}
+  .site-desktop .desktop-panel-facts{padding-top:5px;gap:3px}
+  .site-desktop .desktop-participate{margin-top:7px;min-height:32px}
+  .site-desktop .desktop-about{margin-top:8px}
+}
+
+/* Quadrado de saídas à esquerda + ficha retangular compacta à direita. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{
+    display:grid;grid-template-columns:680px 320px;gap:38px;
+    justify-content:center;align-items:start;padding-top:134px;
+  }
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:680px}
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    width:min(1050px,calc(100% - 72px));top:6px;left:50%;text-align:left;
+  }
+  .site-desktop .desktop-hero-invitation h1{
+    font-size:31px;font-weight:400;line-height:1.06;letter-spacing:-.5px;
+  }
+  .site-desktop .desktop-hero-invitation h1 br{display:none}
+  .site-desktop .desktop-hero-highlight{
+    display:block;margin-top:5px;font-size:35px;font-weight:750;
+    font-style:normal;line-height:1.1;color:#1c2030;
+  }
+  .site-desktop .desktop-hero-invitation p{font-size:14px;font-weight:700;color:var(--giro-brand-red);margin-top:9px}
+  .site-desktop .desktop-stage{width:680px;height:568px;margin:0}
+  .site-desktop .desktop-stage::before{
+    left:155px;top:149px;width:370px;height:268px;border-radius:19px;
+    background:linear-gradient(150deg,#fdfdfe,#f8f9fb);
+  }
+  .site-desktop .desktop-card{width:132px;height:103px}
+  .site-desktop .desktop-card img{height:47px}
+  .site-desktop .desktop-orbit-center,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center{
+    left:337px;top:279px;width:260px;transform:translate(-50%,-50%);
+    text-align:center;
+  }
+  .site-desktop .desktop-experiences:not(.panel-hidden) .desktop-orbit-center>img,
+  .site-desktop .desktop-experiences:not(.panel-hidden) .desktop-orbit-center>h2{display:block}
+  .site-desktop .desktop-orbit-center>img{width:132px;height:69px;margin:0 auto 7px}
+  .site-desktop .desktop-orbit-center h2{font-size:23px;line-height:28px}
+  .site-desktop .desktop-orbit-center p{margin:5px 0 10px;font-size:11px}
+  .site-desktop .desktop-week-controls{gap:12px}
+  .site-desktop .desktop-tour-panel{
+    position:relative;top:auto;left:auto;transform:none;
+    grid-column:2;width:320px;max-width:320px;
+    margin-top:52px;padding:11px 12px 12px;border-radius:11px;
+  }
+  .site-desktop .desktop-panel-photo{height:158px;max-height:158px}
+  .site-desktop .desktop-tour-panel h2{font-size:22px}
+  .site-desktop .desktop-panel-description{font-size:11px;line-height:14px}
+  .site-desktop .desktop-about{margin-top:16px}
+}
+
+/* Grade final com passo uniforme: 150px de cartão + 16px de intervalo
+   na horizontal; 112px de cartão + 14px de intervalo na vertical. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences{
+    grid-template-columns:648px 300px;gap:36px;padding-top:129px;
+  }
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:648px}
+  .site-desktop .desktop-stage{width:648px;height:490px}
+  .site-desktop .desktop-stage::before{
+    left:188px;top:143px;width:272px;height:204px;
+    border:1px solid #eef0f3;border-radius:14px;
+    background:#fafbfc;
+  }
+  .site-desktop .desktop-card{width:150px;height:112px;border-radius:10px}
+  .site-desktop .desktop-card img{height:55px}
+  .site-desktop .desktop-card-title{font-size:12px;line-height:14px;margin-top:5px}
+  .site-desktop .desktop-orbit-center,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center{
+    left:324px;top:245px;width:250px;
+  }
+  .site-desktop .desktop-orbit-center>img,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center>img{
+    width:108px;height:56px;margin:0 auto 5px;
+  }
+  .site-desktop .desktop-orbit-center h2,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center h2{
+    font-size:19px;line-height:24px;
+  }
+  .site-desktop .desktop-orbit-center p{margin:4px 0 8px;font-size:10px}
+  .site-desktop .desktop-week-controls{gap:12px}
+  .site-desktop .desktop-round-arrow{width:32px;height:32px}
+  .site-desktop .desktop-tour-panel{
+    width:300px;max-width:300px;margin-top:53px;padding:10px 11px 12px;
+  }
+  .site-desktop .desktop-panel-photo{height:152px;max-height:152px}
+  .site-desktop #desktopPanelParticipate.desktop-participate{
+    background:#e60023!important;border-color:#e60023!important;color:#fff!important;
+  }
+  .site-desktop #desktopPanelParticipate.desktop-participate:hover{
+    background:#cf001f!important;border-color:#cf001f!important;
+  }
+}
+
+/* Título guiado pelo centro da grade; cartões com respiro uniforme. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences{
+    grid-template-columns:666px 300px;gap:42px;padding-top:123px;
+  }
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:666px}
+  .site-desktop .desktop-stage{width:666px;height:508px}
+  .site-desktop .desktop-stage::before{
+    left:195px;top:144px;width:276px;height:220px;
+  }
+  .site-desktop .desktop-orbit-center,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center{
+    left:333px;top:254px;
+  }
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    left:calc(50% - 171px);top:5px;transform:translateX(-50%);
+    width:666px;text-align:center;
+  }
+  .site-desktop .desktop-hero-invitation h1{font-size:30px;line-height:1.04}
+  .site-desktop .desktop-hero-highlight{margin-top:1px;font-size:34px;line-height:1.06}
+  .site-desktop .desktop-hero-invitation p{
+    margin-top:6px;font-size:13px;font-weight:400;
+  }
+  .site-desktop .desktop-tour-panel{margin-top:10px}
+  .site-desktop .desktop-practical h3{align-items:center;gap:10px}
+  .site-desktop .desktop-practical h3 svg{position:relative;top:-1px}
+}
+
+/* Ampliação visível do respiro: 32px entre colunas e 28px entre linhas. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences{
+    grid-template-columns:696px 300px;gap:42px;
+    padding-top:123px;padding-bottom:32px;
+  }
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:696px}
+  .site-desktop .desktop-stage{width:696px;height:532px}
+  .site-desktop .desktop-stage::before{
+    left:208px;top:157px;width:280px;height:218px;
+    background:#fafbfc;border:1px solid #edf0f3;
+  }
+  .site-desktop .desktop-orbit-center,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-orbit-center{
+    left:348px;top:266px;
+  }
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:-9px;width:696px;
+  }
+  .site-desktop .desktop-tour-panel{margin-top:22px}
+  .site-desktop .desktop-about{margin-top:22px}
+}
+
+/* Ficha lateral mais horizontal, com leitura organizada por pictogramas. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences{grid-template-columns:696px 400px;gap:28px}
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:696px}
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    left:calc(50% - 214px);
+  }
+  .site-desktop .desktop-tour-panel{
+    width:400px;max-width:400px;margin-top:17px;
+    padding:13px 16px 15px;border-radius:12px;
+  }
+  .site-desktop .desktop-panel-photo{height:133px;max-height:133px}
+  .site-desktop .desktop-panel-kicker{margin-top:10px;margin-bottom:4px}
+  .site-desktop .desktop-tour-panel h2{font-size:23px;line-height:1.16}
+  .site-desktop .desktop-panel-description{font-size:12px;line-height:16px;margin:8px 0}
+  .site-desktop .desktop-panel-meeting{font-size:11px;line-height:15px;margin-bottom:10px}
+  .site-desktop .desktop-panel-facts{
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 14px;
+    padding-top:10px;
+  }
+  .site-desktop .desktop-panel-facts>div{align-items:center;gap:7px;font-size:11px;line-height:17px}
+  .site-desktop .desktop-panel-facts>div:first-child{grid-column:1/-1}
+  .site-desktop .desktop-panel-facts svg{width:16px;height:16px;color:var(--giro-brand-red)}
+  .site-desktop .desktop-participate{margin-top:13px;min-height:38px}
+}
+
+/* Retorno à ficha vertical compacta: menos largura, mais altura e maior respiro. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences{
+    grid-template-columns:696px 316px;gap:48px;
+  }
+  .site-desktop .desktop-experiences.panel-hidden{grid-template-columns:696px}
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    left:calc(50% - 182px);
+  }
+  .site-desktop .desktop-hero-invitation h1{line-height:1.02}
+  .site-desktop .desktop-hero-highlight{margin-top:0;line-height:1.03}
+  .site-desktop .desktop-hero-invitation p{margin-top:2px;font-weight:400}
+  .site-desktop .desktop-tour-panel{
+    width:316px;max-width:316px;margin-top:-22px;
+    padding:16px 15px 18px;border-radius:12px;
+  }
+  .site-desktop .desktop-panel-photo{height:178px;max-height:178px}
+  .site-desktop .desktop-panel-kicker{margin-top:12px;margin-bottom:6px}
+  .site-desktop .desktop-tour-panel h2{font-size:23px;line-height:1.14}
+  .site-desktop .desktop-panel-description{margin:11px 0;font-size:12px;line-height:17px}
+  .site-desktop .desktop-panel-meeting{margin:0 0 13px;font-size:11px;line-height:16px}
+  .site-desktop .desktop-panel-facts{
+    grid-template-columns:1fr;gap:9px;padding-top:12px;
+  }
+  .site-desktop .desktop-panel-facts>div:first-child{grid-column:auto}
+  .site-desktop .desktop-panel-facts>div{gap:10px;line-height:18px}
+  .site-desktop .desktop-participate{margin-top:15px;min-height:39px}
+  .site-desktop .desktop-about{align-items:start}
+  .site-desktop .desktop-about>p{transform:none;margin-top:39px}
+  .site-desktop .desktop-contact-strip{border-top:0;border-bottom:0}
+  .site-desktop .desktop-contact-strip .desktop-shell{
+    max-width:1100px;border-top:1px solid #e7e9ed;border-bottom:1px solid #e7e9ed;
+  }
+  .site-desktop .desktop-footer{max-width:1100px}
+}
+
+/* Régua editorial única: título livre da faixa, seções alinhadas e linhas curtas. */
+@media(min-width:1360px){
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{top:17px}
+  .site-desktop .desktop-about,
+  .site-desktop .desktop-practical{
+    width:min(1100px,100%);margin-left:auto;margin-right:auto;
+  }
+  .site-desktop .desktop-about{
+    padding-left:0;padding-right:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  }
+  .site-desktop .desktop-about h2{
+    font-family:var(--giro-ui);font-size:29px;font-weight:500;
+    line-height:1.2;letter-spacing:-.4px;
+  }
+  .site-desktop .desktop-about>p{margin-top:47px}
+  .site-desktop .desktop-practical>div:first-child{padding-left:0}
+  .site-desktop .desktop-contact-strip .desktop-shell,
+  .site-desktop .desktop-footer{width:min(1100px,calc(100% - 64px))}
+}
+
+/* Manchete de abertura: hierarquia única, sem serifas, com respiro dos passeios. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{
+    padding-top:145px;
+  }
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:12px;
+  }
+  .site-desktop .desktop-hero-invitation h1{
+    font-family:var(--giro-ui);
+    font-size:36px;
+    font-weight:650;
+    line-height:1.07;
+    letter-spacing:-1.3px;
+  }
+  .site-desktop .desktop-hero-highlight{
+    margin-top:1px;
+    font-family:var(--giro-ui);
+    font-size:34px;
+    font-weight:550;
+    line-height:1.07;
+    letter-spacing:-1.1px;
+    color:var(--giro-brand-red,#e60023);
+  }
+  .site-desktop .desktop-hero-invitation p{
+    margin-top:12px;
+    font-family:var(--giro-ui);
+    font-size:14px;
+    font-weight:400;
+    line-height:20px;
+    color:#616976;
+  }
+}
+
+/* Editorial de abertura independente dos cartões: faixa discreta e aviso acima do menu. */
+@media(min-width:1360px){
+  .site-desktop>.desktop-notice:first-child{
+    display:block;
+    min-height:25px;
+    padding:4px 14px;
+    background:#191b20;
+    color:#f6f6f7;
+    font-size:10px;
+    line-height:17px;
+    letter-spacing:.15px;
+  }
+  .site-desktop .desktop-notice-after-header{display:none}
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{
+    padding-top:184px;
+  }
+  .site-desktop .desktop-experiences::before{
+    content:'';
+    position:absolute;
+    left:50%;top:0;
+    width:100vw;height:153px;
+    transform:translateX(-50%);
+    background:linear-gradient(105deg,#f9f9fa 0%,#fff7f7 52%,#f9f9fa 100%);
+    border-bottom:1px solid #ebe7e9;
+    pointer-events:none;
+  }
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:20px;
+    z-index:1;
+  }
+  .site-desktop .desktop-hero-invitation h1{
+    font-size:37px;
+    line-height:1.08;
+    letter-spacing:-1.5px;
+    font-weight:700;
+  }
+  .site-desktop .desktop-hero-highlight{
+    font-size:34px;
+    font-weight:500;
+    line-height:1.08;
+    letter-spacing:-1.1px;
+  }
+  .site-desktop .desktop-hero-invitation p{
+    margin-top:10px;
+    font-size:13px;
+    letter-spacing:.15px;
+  }
+}
+
+/* Duas vozes na mesma linha: manchete à esquerda, convite à direita. */
+@media(min-width:1360px){
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:35px;
+    left:50%;
+    width:min(1100px,calc(100% - 60px));
+    transform:translateX(-50%);
+    text-align:left;
+  }
+  .site-desktop .desktop-hero-invitation{
+    display:grid;
+    grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);
+    gap:36px;
+    align-items:center;
+  }
+  .site-desktop .desktop-hero-leadblock h1{
+    margin:0;
+    font-family:var(--giro-ui);
+    font-size:28px;
+    line-height:1.14;
+    font-weight:750;
+    letter-spacing:-.9px;
+    white-space:nowrap;
+  }
+  .site-desktop .desktop-hero-leadblock p{
+    margin:9px 0 0;
+    font-size:14px;
+    line-height:20px;
+    color:#616976;
+    font-weight:400;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-highlight{
+    display:block;
+    margin:0;
+    font-family:var(--giro-ui);
+    font-size:29px;
+    line-height:1.18;
+    font-weight:450;
+    letter-spacing:-.6px;
+    font-style:italic;
+    color:var(--giro-brand-red,#e60023);
+    white-space:nowrap;
+  }
+}
+
+/* Abertura final: bloco editorial coeso, destaque de convite e faixa mais leve. */
+@media(min-width:1360px){
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{
+    padding-top:166px;
+  }
+  .site-desktop .desktop-experiences::before{
+    height:138px;
+    background:linear-gradient(105deg,#fafafb 0%,#fdf9f9 52%,#fafafb 100%);
+    border-bottom:1px solid #ebebee;
+  }
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:16px;
+    left:50%;
+    width:min(950px,calc(100% - 56px));
+    transform:translateX(-50%);
+    text-align:center;
+  }
+  .site-desktop .desktop-hero-invitation{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+  }
+  .site-desktop .desktop-hero-invitation h1{
+    margin:0;
+    font-family:var(--giro-ui);
+    font-size:39px;
+    line-height:1.1;
+    font-weight:650;
+    letter-spacing:-1.5px;
+    color:#20242b;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-highlight{
+    display:block;
+    margin:1px 0 0;
+    font-family:var(--giro-ui);
+    font-size:29px;
+    line-height:1.16;
+    font-weight:450;
+    font-style:italic;
+    letter-spacing:-.75px;
+    color:var(--giro-brand-red,#e60023);
+    white-space:normal;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-caption{
+    margin:9px 0 0;
+    font-family:var(--giro-ui);
+    font-size:13px;
+    line-height:19px;
+    font-weight:400;
+    letter-spacing:.2px;
+    color:#656b76;
+  }
+}
+
+/* Alinhamento final: régua do GIRO, títulos sem Georgia e separadores discretos. */
+.site-desktop .desktop-hero h1,
+.site-desktop .desktop-orbit-center h2,
+.site-desktop .desktop-tour-panel h2,
+.site-desktop .desktop-about h2,
+.site-desktop .desktop-contact-strip h3,
+.future-card h2{
+  font-family:'Inter','Segoe UI',Arial,Helvetica,sans-serif;
+}
+
+/* Previsão na própria página: compacta, sem links para fora do GIRO. */
+.site-desktop .desktop-weather{display:none}
+@media(min-width:1360px){
+  .site-desktop .desktop-weather{
+    display:block;
+    position:absolute;
+    z-index:2;
+    top:9px;
+    left:calc(50% + 214px);
+    width:316px;
+    min-height:107px;
+    padding:10px 12px 8px;
+    border:1px solid #e6e8ec;
+    border-radius:10px;
+    background:#fcfcfd;
+    box-shadow:0 3px 14px rgba(31,41,55,.035);
+  }
+  .site-desktop .desktop-weather-heading{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-size:12px;
+    font-weight:600;
+    line-height:18px;
+    color:#252b35;
+  }
+  .site-desktop .desktop-weather-heading-icon{
+    color:var(--giro-brand-red,#e60023);
+    font-size:17px;
+    line-height:16px;
+  }
+  .site-desktop .desktop-weather-forecast{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0;
+    margin-top:7px;
+    min-height:42px;
+  }
+  .site-desktop .desktop-weather-day{
+    display:grid;
+    grid-template-rows:auto auto;
+    justify-items:center;
+    gap:2px;
+    padding:2px 4px;
+    text-align:center;
+    color:#373d47;
+  }
+  .site-desktop .desktop-weather-day+.desktop-weather-day{
+    border-left:1px solid #e5e7eb;
+  }
+  .site-desktop .desktop-weather-day-name{
+    font-size:10px;
+    line-height:13px;
+    color:#656c76;
+    font-weight:500;
+  }
+  .site-desktop .desktop-weather-day-values{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    white-space:nowrap;
+    font-size:11px;
+    font-weight:550;
+    line-height:16px;
+  }
+  .site-desktop .desktop-weather-day-values svg{
+    width:17px;
+    height:17px;
+    flex-shrink:0;
+    stroke:var(--giro-brand-red,#e60023);
+    fill:none;
+    stroke-width:1.65;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .site-desktop .desktop-weather-loading,
+  .site-desktop .desktop-weather-error{
+    grid-column:1/-1;
+    align-self:center;
+    color:#666d78;
+    font-size:11px;
+  }
+  .site-desktop .desktop-weather-source{
+    margin:3px 0 0;
+    font-size:9px;
+    line-height:13px;
+    letter-spacing:.04px;
+    color:#838994;
+    text-align:right;
+  }
+}
+@media(min-width:1360px){
+  .site-desktop .desktop-header-inner{
+    width:min(1060px,calc(100% - 64px));
+  }
+  .site-desktop .desktop-experiences,
+  .site-desktop .desktop-experiences.panel-hidden{
+    padding-top:174px;
+  }
+  .site-desktop .desktop-experiences::before{
+    height:130px;
+    background:#fff;
+    border:0;
+  }
+  .site-desktop .desktop-experiences::after{
+    content:'';
+    position:absolute;
+    top:130px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1060px,100%);
+    height:1px;
+    background:#e7e8eb;
+    pointer-events:none;
+  }
+  .site-desktop .desktop-hero,
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    top:12px;
+    left:calc(50% - 530px);
+    transform:none;
+    width:min(900px,100%);
+    text-align:left;
+  }
+  .site-desktop .desktop-experiences.panel-hidden .desktop-hero{
+    left:calc(50% - 348px);
+  }
+  .site-desktop .desktop-hero-invitation{
+    align-items:flex-start;
+  }
+  .site-desktop .desktop-hero-invitation h1{
+    font-size:38px;
+    line-height:1.08;
+    font-weight:650;
+    letter-spacing:-1.4px;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-highlight{
+    margin-top:0;
+    font-size:29px;
+    line-height:1.1;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-caption{
+    margin-top:9px;
+  }
+  .site-desktop .desktop-stage::before{
+    background:#fff;
+    box-shadow:none;
+    border:1px solid #eceff2;
+  }
+  .site-desktop #desktopPrev:not(:disabled) .desktop-round-arrow{
+    background:#24272d;
+    border-color:#24272d;
+    color:#fff;
+  }
+  .site-desktop #desktopPrev:not(:disabled):hover .desktop-round-arrow{
+    background:#111316;
+    border-color:#111316;
+  }
+}
+
+/* Ajuste de hierarquia da chamada: convidativa, sem competir com os passeios.
+   O celular mantém a composição aprovada; apenas harmoniza a tipografia. */
+.site-desktop .desktop-hero-invitation h1{
+  font-family:var(--giro-ui);
+  font-weight:500;
+  color:#414853;
+  letter-spacing:-.8px;
+}
+@media(min-width:1360px){
+  .site-desktop .desktop-hero-invitation h1{
+    font-size:35px;
+    line-height:1.1;
+    letter-spacing:-1.05px;
+  }
+}
+@media(max-width:1359px){
+  .site-desktop .desktop-hero-invitation h1{
+    font-size:clamp(24px,2.8vw,32px);
+    line-height:1.16;
+    letter-spacing:-.55px;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-highlight{
+    font-family:var(--giro-ui);
+    font-size:clamp(16px,1.8vw,19px);
+    line-height:1.28;
+    font-weight:400;
+    font-style:italic;
+    color:#a61d35;
+  }
+  .site-desktop .desktop-hero-invitation>.desktop-hero-caption{
+    font-family:var(--giro-ui);
+    font-size:13px;
+    line-height:1.4;
+    font-weight:400;
+    color:#656d77;
+  }
+}
+@media(max-width:767px){
+  .site-desktop .desktop-hero-invitation h1{font-size:23px}
+  .site-desktop .desktop-hero-invitation>.desktop-hero-highlight{font-size:16px}
+  .site-desktop .desktop-hero-invitation>.desktop-hero-caption{font-size:12px}
+}
+
 </style></head><body>
 <header class="head"><div class="wrap nav"><div class="brand-lockup"><a href="#inicio"><img class="logo" src="logo.png" alt="GIRO SINDEGTUR SP"></a><div class="acronym"><b>G</b>uias de turismo<br><b>I</b>nformações<br><b>R</b>oteiros<br><b>O</b>pções turísticas</div></div><button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">☰</button><nav class="navlinks" id="mainNav"><a href="#giro">Experiências</a><button data-future="city" type="button">City Tour</button><button data-future="excursoes" type="button">Excursões</button><button data-future="eventos" type="button">Eventos especiais</button><button id="openAbout" type="button">Sobre o projeto</button><a href="#central">Central</a><a href="#contato">Contato</a><a href="https://www.instagram.com/giro.sindegtur/" target="_blank" rel="noopener">Instagram ↗</a></nav></div></header>
 <div class="test-notice" role="status"><strong>Site em fase de testes, ainda não operacional.</strong> As informações são provisórias. Para dúvidas ou interesse nos passeios, escreva para <a href="mailto:giro.sindegtur@gmail.com">giro.sindegtur@gmail.com</a>.</div>
@@ -372,6 +1460,60 @@ html{scrollbar-gutter:stable}
 <div class="side-shade" id="shade"></div><aside class="side-panel" id="sidePanel" role="dialog" aria-modal="true" aria-labelledby="panel-title"><button class="panel-close" id="panelClose" aria-label="Fechar ficha">×</button><img class="panel-photo" id="panel-photo" src="assets/photo-000.jpg" alt="Fotografia da experiência"><div class="panel-inner"><span class="eyebrow">SEU PRÓXIMO PASSEIO</span><h2 id="panel-title"></h2><p id="panel-desc"></p><div class="panel-meta"><div class="meta-row"><span class="meta-icon">♙</span><span>Caminhada · 2 horas</span></div><div class="meta-row"><span class="meta-icon">◷</span><span id="panel-date"></span></div><div class="meta-row"><span class="meta-icon">◇</span><span id="panel-price">R$ 50 por pessoa</span></div></div><a id="participate" class="btn" href="#" target="_blank" rel="noopener noreferrer">Quero participar →</a></div></aside>
 <div class="future-panel" id="futurePanel" role="dialog" aria-modal="true" aria-labelledby="futureTitle"><div class="future-card"><button class="panel-close" id="futureClose" aria-label="Fechar novidade">×</button><img class="future-photo" id="futurePhoto" src="assets/photo-008.jpg" alt="Imagem de São Paulo"><div class="future-content"><span class="kicker">Novas possibilidades</span><h2 id="futureTitle"></h2><p id="futureMessage"></p><div class="future-links" id="futureLinks"></div><a id="futureContact" class="btn future-contact" href="#">Consultar passeio para seu grupo →</a></div></div></div>
 <div class="about-panel" id="aboutPanel" role="dialog" aria-modal="true" aria-labelledby="aboutTitle"><div class="about-card"><button class="panel-close" id="aboutClose" aria-label="Fechar apresentação">×</button><span class="kicker">Conheça o projeto</span><h2 id="aboutTitle">Sobre o GIRO SINDEGTUR-SP</h2><div id="aboutText"></div></div></div>
+<div class="site-desktop" id="desktopExperience">
+  <div class="desktop-notice">Site em fase de testes, ainda não operacional. Programação provisória.</div>
+  <header class="desktop-header"><div class="desktop-shell desktop-header-inner">
+    <a href="#desktopExperience" aria-label="Página inicial"><img src="logo.png" alt="GIRO SINDEGTUR-SP" class="desktop-logo"></a>
+    <button class="desktop-menu-button" id="desktopMenuButton" type="button" aria-expanded="false" aria-controls="desktopNav">☰ <span>Menu</span></button>
+    <nav class="desktop-nav" id="desktopNav" aria-label="Navegação principal">
+      <a href="#desktopExperiencias">♙ <span>Experiências</span></a>
+      <button data-future="city" type="button">▧ <span>City Tour</span></button>
+      <button data-future="excursoes" type="button">▣ <span>Excursões</span></button>
+      <button data-future="eventos" type="button">▢ <span>Eventos especiais</span></button>
+      <button id="desktopAboutButton" type="button">ⓘ <span>Sobre o projeto</span></button>
+      <a href="#desktopCentral">♧ <span>Central</span></a>
+      <a href="#desktopContato">✉ <span>Contato</span></a>
+      <a href="https://www.instagram.com/giro.sindegtur/" target="_blank" rel="noopener noreferrer">◎ <span>Instagram ↗</span></a>
+    </nav>
+  </div></header>
+  <div class="desktop-notice desktop-notice-after-header">Site em fase de testes, ainda não operacional. Programação provisória.</div>
+  <main class="desktop-shell">
+    <section class="desktop-experiences" id="desktopExperiencias">
+      <div class="desktop-experiences-left">
+        <div class="desktop-hero"><div class="desktop-hero-invitation"><h1>São Paulo tem muitas histórias.</h1><p class="desktop-hero-highlight">Que tal descobrir algumas conosco?</p><p class="desktop-hero-caption">Passeios com guia de turismo.</p></div></div>
+        <section class="desktop-weather" aria-label="Previsão do tempo em São Paulo">
+          <div class="desktop-weather-heading"><span class="desktop-weather-heading-icon" aria-hidden="true">☁</span><span>Tempo em São Paulo</span></div>
+          <div id="desktopWeatherForecast" class="desktop-weather-forecast" aria-live="polite"><span class="desktop-weather-loading">Consultando previsão…</span></div>
+          <p class="desktop-weather-source">Previsão: CPTEC/INPE · BrasilAPI</p>
+        </section>
+        <div class="desktop-stage">
+          <div class="desktop-orbit-line" aria-hidden="true"></div>
+          <div class="desktop-orbit-dots" id="desktopOrbitDots" aria-hidden="true"></div>
+          <div class="desktop-orbit-center"><img src="logo.png" alt="GIRO SINDEGTUR-SP"><h2>Passeios da Semana</h2><p id="desktopWeekRange">Programação da semana</p><div class="desktop-week-controls"><button id="desktopPrev" type="button" aria-label="Semana Anterior"><span class="desktop-round-arrow">←</span><span>Semana Anterior</span></button><button id="desktopNext" type="button" aria-label="Próxima Semana"><span class="desktop-round-arrow">→</span><span>Próxima Semana</span></button></div></div>
+          <div class="desktop-cards" id="desktopCards" aria-label="Experiências da semana"></div>
+        </div>
+      </div>
+      <aside class="desktop-tour-panel" id="desktopTourPanel" aria-label="Detalhes do passeio" hidden>
+        <button class="desktop-panel-close" id="desktopPanelClose" type="button" aria-label="Fechar detalhes">×</button>
+        <img id="desktopPanelPhoto" class="desktop-panel-photo" src="assets/photo-000.jpg" alt="Atrativo do passeio">
+        <p class="desktop-panel-kicker">Passeio selecionado</p>
+        <h2 id="desktopPanelTitle" tabindex="-1"></h2>
+        <p id="desktopPanelDescription" class="desktop-panel-description"></p>
+        <p id="desktopPanelMeeting" class="desktop-panel-meeting"></p>
+        <div class="desktop-panel-facts"><div><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/></svg><span id="desktopPanelDate"></span></div><div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="m7 21 3-6-2-3-3 2m5 1 2-5 3 3 3 1"/></svg><span>Caminhada · 2 horas</span></div><div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-7 7L3 12Z"/><circle cx="8" cy="8" r="1"/></svg><span id="desktopPanelPrice"></span></div></div>
+        <a id="desktopPanelParticipate" class="desktop-participate" href="#" target="_blank" rel="noopener noreferrer">Quero participar →</a>
+      </aside>
+    </section>
+    <section class="desktop-about"><div><div class="desktop-about-rule"></div><p>Sobre o projeto</p><h2>GIRO SINDEGTUR-SP</h2></div><p>O GIRO SINDEGTUR-SP é um coletivo de guias de turismo que nasceu para criar oportunidades aos profissionais e oferecer a moradores e visitantes novas maneiras de conhecer São Paulo, por meio de passeios que aproximam pessoas, lugares e histórias.<br>Uma iniciativa do Sindicato dos Guias de Turismo do Estado de São Paulo (SINDEGTUR-SP).</p></section>
+    <section class="desktop-practical" id="desktopCentral">
+      <div><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Onde estamos</h3><p>Galeria R. Monteiro<br>Rua 24 de Maio, 77<br>República · São Paulo<br>Próximo à Galeria do Rock</p><p class="desktop-note">Loja em definição.</p><a href="https://www.google.com/maps/search/?api=1&query=Rua+24+de+Maio+77+Sao+Paulo+SP" target="_blank" rel="noopener noreferrer">Abrir no mapa ↗</a></div>
+      <div><h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horários da central</h3><p>Segunda a sexta<br><strong>9h às 17h</strong></p><p>Sábado<br><strong>9h até o fechamento da galeria</strong></p><p class="desktop-note">Domingos e feriados: fechada.</p></div>
+      <div><h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Antes de sair</h3><p>Confira a data, o horário e o ponto de encontro nos detalhes do passeio escolhido.</p><p>Saídas regulares: 9h40 e 14h10, de segunda a sábado.</p><p>Atividades especiais conforme programação.</p></div>
+    </section>
+  </main>
+  <div class="desktop-contact-strip" id="desktopContato"><div class="desktop-shell"><h3>Contato</h3><a id="desktopEmail" href="mailto:giro.sindegtur@gmail.com" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>giro.sindegtur@gmail.com</span></a><span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5Z"/></svg><span>WhatsApp · Em breve</span></span><a href="https://www.instagram.com/giro.sindegtur/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span>Instagram ↗</span></a></div></div>
+  <footer class="desktop-footer desktop-shell"><span>GIRO SINDEGTUR-SP</span><span class="desktop-footer-acronym"><b>G</b>uias de turismo <i>·</i> <b>I</b>nformações <i>·</i> <b>R</b>oteiros <i>·</i> <b>O</b>pções turísticas</span><span>Apoio institucional do <a href="https://www.sindegtursp.com.br/" target="_blank" rel="noopener noreferrer">SINDEGTUR-SP ↗</a></span></footer>
+</div>
 <script src="conteudo.js"></script><script src="calendario.js"></script><script>
 const base=[
 ['2026-11-02','Segunda','09:40','Histórias que o Centro Conta','e01'],['2026-11-02','Segunda','14:10','Histórias que o Centro Conta','e02'],
@@ -467,4 +1609,177 @@ mainNav.addEventListener('click',event=>{
     mobileMenuToggle.textContent='☰';
   }
 });
+/* A apresentação ampla lê a mesma programação e os mesmos dados da versão móvel. */
+const desktopSlots=[
+  [408,55],[573,96.5],[693.8,210],[738,365],[693.8,520],[573,633.5],
+  [408,675],[243,633.5],[122.2,520],[78,365],[122.2,210],[243,96.5]
+];
+const desktopOrbitScale=.91;
+/* Moldura retangular: quatro saídas acima, duas em cada lateral e quatro abaixo. */
+const desktopFrameSlots=[
+  [75,56],[257,56],[439,56],[621,56],
+  [621,196],[621,336],
+  [621,476],[439,476],[257,476],[75,476],
+  [75,336],[75,196]
+];
+let desktopSelectedIndex=null,desktopRenderedWeek=null,desktopLastCard=null;
+const desktopPanel=document.getElementById('desktopTourPanel');
+const desktopSection=document.getElementById('desktopExperiencias');
+const desktopCards=document.getElementById('desktopCards');
+const desktopDots=document.getElementById('desktopOrbitDots');
+for(let i=0;i<12;i++){
+  const a=(-75+i*30)*Math.PI/180;
+  const dot=document.createElement('span');dot.className='desktop-orbit-dot';
+  dot.style.left=(window.innerWidth>=1360?565+475*Math.cos(a):(408+330*Math.cos(a))*desktopOrbitScale)+'px';
+  dot.style.top=(window.innerWidth>=1360?350+300*Math.sin(a):(365+310*Math.sin(a))*desktopOrbitScale)+'px';
+  dot.style.background=i%2===0?'#cfd1d5':'#e7aaaa';desktopDots.append(dot);
+}
+function closeDesktopDetail(restoreFocus=true){
+  desktopPanel.hidden=true;
+  desktopSection.classList.add('panel-hidden');
+  desktopCards.querySelectorAll('.desktop-card').forEach(b=>b.setAttribute('aria-pressed','false'));
+  desktopSelectedIndex=null;
+  if(restoreFocus&&desktopLastCard?.isConnected)desktopLastCard.focus();
+}
+function openDesktopDetail(i,button,moveFocus=false){
+  const r=current()[i];if(!r)return;
+  desktopSelectedIndex=i;desktopLastCard=button;
+  desktopSection.classList.remove('panel-hidden');desktopPanel.hidden=false;
+  desktopCards.querySelectorAll('.desktop-card').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.idx===i)));
+  document.getElementById('desktopPanelPhoto').src=photoFor(i);
+  document.getElementById('desktopPanelPhoto').style.objectPosition=positionFor(i);
+  document.getElementById('desktopPanelTitle').textContent=r[3]||'Histórias que o Centro Conta';
+  document.getElementById('desktopPanelDescription').textContent=descriptionFor(r[3]);
+  document.getElementById('desktopPanelMeeting').textContent='Encontro e saída: '+localDeSaida(r[3]);
+  document.getElementById('desktopPanelDate').textContent=r[1]+', '+formatted(r[0])+' · '+r[2];
+  document.getElementById('desktopPanelPrice').textContent='R$ '+Number(config.valorCaminhada??50).toLocaleString('pt-BR')+' por pessoa';
+  const dataBR=r[0].slice(8,10)+'/'+r[0].slice(5,7)+'/'+r[0].slice(0,4);
+  const subject='Interesse | '+r[3]+' | '+dataBR+' | '+r[2];
+  const body='Olá, equipe GIRO SINDEGTUR-SP!\n\nGostaria de consultar a disponibilidade para este passeio:\nRoteiro: '+r[3]+'\nData: '+dataBR+'\nHorário: '+r[2]+'\nParticipantes: ____ pessoa(s)\nNome para contato: ____\n\nPor favor, enviem as orientações de reserva e pagamento.';
+  document.getElementById('desktopPanelParticipate').href=gmailCompose(subject,body);
+  if(moveFocus&&window.innerWidth<1360){
+    document.getElementById('desktopPanelTitle').focus({preventScroll:true});
+    desktopPanel.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+function renderDesktop(){
+  const rows=current(),offset=((weekIndex%2)+2)%2*12;
+  const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const visible=rows.slice(offset,offset+12).map((r,n)=>({r,i:offset+n})).filter(x=>x.r[0]>=today&&!window.GIRO_CALENDARIO.isClosedDate(x.r[0],config.datasSemOperacao||[]));
+  const oldSelection=desktopSelectedIndex;
+  const changed=desktopRenderedWeek!==null&&desktopRenderedWeek!==weekIndex;
+  desktopRenderedWeek=weekIndex;
+  desktopCards.replaceChildren();
+  for(const {r,i} of visible){
+    const day=new Date(r[0]+'T12:00:00Z').getUTCDay();
+    const slot=(day-1)*2+(r[2]==='14:10'?1:0);
+    if(slot<0||slot>=12)continue;
+    const b=document.createElement('button');b.type='button';b.className='desktop-card';b.dataset.idx=i;
+    b.setAttribute('aria-pressed','false');b.setAttribute('aria-label',r[1]+' '+formatted(r[0])+' às '+r[2]+' — '+r[3]);
+    const orbitAngle=(-90+slot*30)*Math.PI/180;
+    b.style.left=(window.innerWidth>=1360?desktopFrameSlots[slot][0]:desktopSlots[slot][0]*desktopOrbitScale)+'px';
+    b.style.top=(window.innerWidth>=1360?desktopFrameSlots[slot][1]:desktopSlots[slot][1]*desktopOrbitScale)+'px';
+    const img=document.createElement('img');img.src=photoFor(i);img.alt='';img.style.objectPosition=positionFor(i);
+    const date=document.createElement('span');date.className='desktop-card-date';
+    const dayName=document.createElement('span');dayName.textContent=['SEG','TER','QUA','QUI','SEX','SÁB'][day-1]||r[1];
+    const time=document.createElement('span');time.textContent=r[2].replace(':','h');date.append(dayName,time);
+    const name=document.createElement('span');name.className='desktop-card-title';name.textContent=r[3];
+    b.append(date,img,name);b.addEventListener('click',()=>openDesktopDetail(i,b,true));desktopCards.append(b);
+  }
+  const first=visible[0]?.r,last=visible.at(-1)?.r;
+  document.getElementById('desktopWeekRange').textContent=first&&last?formatted(first[0])+' a '+formatted(last[0])+' de '+first[0].slice(0,4):'Sem passeios disponíveis';
+  document.getElementById('desktopPrev').disabled=weekIndex<=earliestWeekIndex;
+  if(changed){
+    closeDesktopDetail(false);
+    const nextCard=desktopCards.querySelector('.desktop-card');
+    if(nextCard)openDesktopDetail(+nextCard.dataset.idx,nextCard,false);
+  }
+  else if(oldSelection!==null){const chosen=desktopCards.querySelector('[data-idx="'+oldSelection+'"]');if(chosen)openDesktopDetail(oldSelection,chosen,false);else closeDesktopDetail(false)}
+  else if(desktopRenderedWeek===0||desktopRenderedWeek===earliestWeekIndex){
+    const firstCard=desktopCards.querySelector('.desktop-card');if(firstCard)openDesktopDetail(+firstCard.dataset.idx,firstCard,false);
+  }
+}
+const originalPaint=paint;
+paint=function(){originalPaint();renderDesktop()};
+renderDesktop();
+let desktopWasWide=window.innerWidth>=1360;
+window.addEventListener('resize',()=>{
+  const wide=window.innerWidth>=1360;
+  if(wide===desktopWasWide)return;
+  desktopWasWide=wide;
+  desktopDots.querySelectorAll('.desktop-orbit-dot').forEach((dot,i)=>{
+    const a=(-75+i*30)*Math.PI/180;
+    dot.style.left=(wide?565+475*Math.cos(a):(408+330*Math.cos(a))*desktopOrbitScale)+'px';
+    dot.style.top=(wide?350+300*Math.sin(a):(365+310*Math.sin(a))*desktopOrbitScale)+'px';
+  });
+  renderDesktop();
+});
+document.getElementById('desktopPrev').onclick=()=>document.getElementById('prev').click();
+document.getElementById('desktopNext').onclick=()=>document.getElementById('next').click();
+document.getElementById('desktopPanelClose').onclick=()=>closeDesktopDetail(true);
+document.getElementById('desktopAboutButton').onclick=()=>document.getElementById('openAbout').click();
+const desktopMenuButton=document.getElementById('desktopMenuButton');
+const desktopNav=document.getElementById('desktopNav');
+const desktopIconPaths=[
+  '<circle cx="13" cy="4" r="2"/><path d="m7 21 3-6-2-3-3 2"/><path d="m10 15 2-5 3 3 3 1"/><path d="m12 10-2-2-3 1"/>',
+  '<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/>',
+  '<rect x="4" y="3" width="16" height="15" rx="2"/><path d="M4 10h16M7 18v3m10-3v3M8 6h8"/>',
+  '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18"/>',
+  '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+  '<path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5a9 9 0 0 1-.9-4A8.5 8.5 0 0 1 12.5 3a8.5 8.5 0 0 1 8.5 8.5z"/>',
+  '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>'
+];
+desktopNav.querySelectorAll('a,button').forEach((item,i)=>{
+  if(item.firstChild?.nodeType===Node.TEXT_NODE)item.firstChild.nodeValue='';
+  item.insertAdjacentHTML('afterbegin','<svg viewBox="0 0 24 24" aria-hidden="true">'+desktopIconPaths[i]+'</svg>');
+});
+desktopMenuButton.onclick=()=>{const isOpen=desktopNav.classList.toggle('is-open');desktopMenuButton.setAttribute('aria-expanded',String(isOpen))};
+desktopNav.onclick=event=>{if(event.target.closest('button,a')){desktopNav.classList.remove('is-open');desktopMenuButton.setAttribute('aria-expanded','false')}};
+document.getElementById('desktopEmail').href=gmailCompose();
+// Previsão de São Paulo sem redirecionar o visitante: CPTEC/INPE via BrasilAPI.
+const weatherForecast=document.getElementById('desktopWeatherForecast');
+function weatherSymbol(description){
+  const value=String(description||'').toLocaleLowerCase('pt-BR');
+  const paths=/chuva|pancada|temporal|trovoada/.test(value)
+    ?'<path d="M7 16H6a4 4 0 0 1-.5-8 6.5 6.5 0 0 1 12.7 1.5A3.5 3.5 0 0 1 18 16H17"/><path d="m8 19-1 2m5-2-1 2m5-2-1 2"/>'
+    :/parcial|sol entre nuvens/.test(value)
+    ?'<circle cx="8" cy="7" r="3"/><path d="M8 1v2m0 8v2M2 7H0m14 0h-2M3 2l2 2m6 6 2 2"/><path d="M9 20H7a4 4 0 0 1-.5-8 6 6 0 0 1 11.7 1.5A3.3 3.3 0 0 1 18 20H9Z"/>'
+    :/sol|claro|ensolarado/.test(value)
+    ?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/>'
+    :'<path d="M7 19H6a4 4 0 0 1-.5-8 6.5 6.5 0 0 1 12.7 1.5A3.5 3.5 0 0 1 18 19H7Z"/>';
+  return '<svg viewBox="0 0 24 24" aria-hidden="true">'+paths+'</svg>';
+}
+async function updateDesktopWeather(){
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),8000);
+  try{
+    const response=await fetch('https://brasilapi.com.br/api/cptec/v1/clima/previsao/244/3',{signal:controller.signal,mode:'cors'});
+    if(!response.ok)throw new Error('Serviço indisponível');
+    const data=await response.json();
+    if(data.cidade!=='São Paulo'||!Array.isArray(data.clima)||!data.clima.length)throw new Error('Dados incompletos');
+    weatherForecast.replaceChildren();
+    for(const day of data.clima.slice(0,3)){
+      if(!/^\d{4}-\d{2}-\d{2}$/.test(day.data)||!Number.isFinite(Number(day.min))||!Number.isFinite(Number(day.max)))continue;
+      const label=new Intl.DateTimeFormat('pt-BR',{weekday:'short',day:'2-digit',timeZone:'UTC'}).format(new Date(day.data+'T12:00:00Z')).replace('.','');
+      const condition=day.condicao_desc||'Previsão';
+      const box=document.createElement('div');box.className='desktop-weather-day';
+      box.title=label+' — '+condition;
+      box.setAttribute('aria-label',label+': '+condition+'. Mínima '+day.min+' graus, máxima '+day.max+' graus.');
+      const date=document.createElement('span');date.className='desktop-weather-day-name';date.textContent=label;
+      const values=document.createElement('span');values.className='desktop-weather-day-values';
+      values.insertAdjacentHTML('afterbegin',weatherSymbol(condition));
+      const temps=document.createElement('span');temps.textContent=Math.round(Number(day.min))+'°–'+Math.round(Number(day.max))+'°';
+      values.append(temps);box.append(date,values);weatherForecast.append(box);
+    }
+    if(!weatherForecast.children.length)throw new Error('Sem previsão disponível');
+  }catch(error){
+    weatherForecast.replaceChildren();
+    const fallback=document.createElement('span');fallback.className='desktop-weather-error';
+    fallback.textContent='Previsão indisponível no momento.';weatherForecast.append(fallback);
+  }finally{clearTimeout(timeout)}
+}
+const desktopWeatherMedia=window.matchMedia('(min-width:1360px)');
+if(desktopWeatherMedia.matches)updateDesktopWeather();
+desktopWeatherMedia.addEventListener('change',event=>{if(event.matches)updateDesktopWeather()});
 </script></body></html>
